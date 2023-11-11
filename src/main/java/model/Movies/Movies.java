@@ -1,4 +1,4 @@
-package model;
+package model.Movies;
 
 import java.util.ArrayList;
 
