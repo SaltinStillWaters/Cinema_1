@@ -30,6 +30,7 @@ public class HomeFrame extends javax.swing.JFrame
 
         uButton1 = new view_components.UButton();
         jLabel1 = new javax.swing.JLabel();
+        uButton2 = new view_components.UButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -48,6 +49,9 @@ public class HomeFrame extends javax.swing.JFrame
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Salti\\Documents\\NetBeansProjects\\Cinema_1\\resources\\2.png")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 890, 630));
+
+        uButton2.setText("uButton2");
+        getContentPane().add(uButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -105,5 +109,6 @@ public class HomeFrame extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private view_components.UButton uButton1;
+    private view_components.UButton uButton2;
     // End of variables declaration//GEN-END:variables
 }
