@@ -1,4 +1,4 @@
-package acc_model;
+package model;
 
 import java.util.HashMap;
 import java.util.Map;

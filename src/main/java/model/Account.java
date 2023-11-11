@@ -1,4 +1,4 @@
-package acc_model;
+package model;
 
 public class Account {
     private String firstName;
