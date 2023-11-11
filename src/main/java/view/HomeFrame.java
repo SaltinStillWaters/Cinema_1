@@ -25,8 +25,7 @@ public class HomeFrame extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         uButton1 = new view_components.UButton();
         jLabel1 = new javax.swing.JLabel();
@@ -37,10 +36,8 @@ public class HomeFrame extends javax.swing.JFrame
 
         uButton1.setText("uButton1");
         uButton1.setType("next");
-        uButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        uButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uButton1ActionPerformed(evt);
             }
         });
