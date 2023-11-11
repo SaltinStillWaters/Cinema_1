@@ -25,7 +25,8 @@ public class HomeFrame extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         uButton1 = new view_components.UButton();
         jLabel1 = new javax.swing.JLabel();
@@ -35,16 +36,18 @@ public class HomeFrame extends javax.swing.JFrame
 
         uButton1.setText("uButton1");
         uButton1.setType("next");
-        uButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        uButton1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 uButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(uButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 79, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\turin\\OneDrive\\Documents\\NetBeansProjects\\Cinema_1\\resources\\2.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Salti\\Documents\\NetBeansProjects\\Cinema_1\\resources\\2.png")); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 890, 630));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 890, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
