@@ -10,7 +10,6 @@ public class Movie
     private String mtcrbRating;
     private String genre;
     
-    
     public Movie(ArrayList<String> infos)
     {
         this.thumbnailName = infos.get(0);
