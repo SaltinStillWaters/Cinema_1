@@ -1,7 +1,7 @@
 package main;
 
 import control.ControlData;
-import model.Movie;
+import model.Movies.Movie;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths; 
