@@ -1,5 +1,7 @@
 package model.theater_seats;
 
+import java.util.ArrayList;
+
 
 public class TheaterSeat
 {
@@ -15,7 +17,7 @@ public class TheaterSeat
         this.date = date;
         this.time = time;
     }
-
+    
     public String getDate()
     {
         return date;
