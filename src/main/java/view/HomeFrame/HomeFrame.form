@@ -42,16 +42,13 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/view/HomeFrame/1.jpg"/>
+          <Image iconType="2" name="C:\Users\turin\OneDrive\Documents\NetBeansProjects\Cinema_1\src\main\java\view\Images\1.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
-      <Events>
-        <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="jLabel1ComponentAdded"/>
-      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="190" width="390" height="250"/>
+          <AbsoluteConstraints x="130" y="220" width="390" height="250"/>
         </Constraint>
       </Constraints>
     </Component>

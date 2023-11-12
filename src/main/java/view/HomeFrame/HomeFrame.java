@@ -44,14 +44,9 @@ public class HomeFrame extends javax.swing.JFrame
         });
         getContentPane().add(uButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 79, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/HomeFrame/1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\turin\\OneDrive\\Documents\\NetBeansProjects\\Cinema_1\\src\\main\\java\\view\\Images\\1.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
-        jLabel1.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                jLabel1ComponentAdded(evt);
-            }
-        });
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 390, 250));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 390, 250));
 
         uButton2.setText("uButton2");
         getContentPane().add(uButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
@@ -63,15 +58,6 @@ public class HomeFrame extends javax.swing.JFrame
     {//GEN-HEADEREND:event_uButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_uButton1ActionPerformed
-
-    private void jLabel1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jLabel1ComponentAdded
-        
-        ImageIcon icon /*Image Name */ = new ImageIcon("src/main/java/view/1.jpg");
-        Image img /*Name Change*/ = icon.getImage();
-        Image imgScale = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon = new ImageIcon(imgScale);
-        jLabel1.setIcon(scaledIcon);
-    }//GEN-LAST:event_jLabel1ComponentAdded
 
     /**
      * @param args the command line arguments
