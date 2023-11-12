@@ -18,7 +18,7 @@ public class TheaterSeats
         
         ArrayList<String> infoHolder = new ArrayList<>();
         
-        Path filePath = Paths.get("src/main/java/model/theater_seats/seat_info.txt");
+        Path filePath = Paths.get("src/main/java/model/theater_seats/seatInfo.txt");
         try (Scanner scanner = new Scanner(filePath))
         {
             while (scanner.hasNextLine())
@@ -40,11 +40,6 @@ public class TheaterSeats
         catch (IOException e)
         {
             e.printStackTrace();
-        }
-        
-        for (TheaterSeat iter : theaterSeats)
-        {
-            System.out.println(iter);
         }
     }
     
