@@ -22,10 +22,13 @@ public class Main
         ArrayList<String> categories = new ArrayList<>();
        
         Path filePath = Paths.get("src/main/java/model/Movies/moviesInfo.txt"); 
-        try (Scanner scanner = new Scanner(filePath)){
-            while (scanner.hasNextLine()){    
+        try (Scanner scanner = new Scanner(filePath))
+        {
+            while (scanner.hasNextLine())
+            {    
                 String line = scanner.nextLine();
-                if (line.isEmpty()){
+                if (line.isEmpty())
+                {
                     Movie movie = new Movie(categories);             
                     cinemaMovies.add(movie);
                     categories.clear();
@@ -33,15 +36,19 @@ public class Main
                 }
                 categories.add(line);
             }
-            if(!categories.isEmpty()){ //will add last movie if there is no empty line at the end of the file
+            if(!categories.isEmpty()) //will add last movie if there is no empty line at the end of the file
+            { 
                 Movie lastMovie = new Movie(categories);
                 cinemaMovies.add(lastMovie);
             }
             
-        } catch (IOException e){
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
-        for (Movie movies : cinemaMovies){
+        
+        for (Movie movies : cinemaMovies)
+        {
             System.out.println(movies);
         }
     }   
