@@ -1,6 +1,8 @@
 package model.theater_seats;
 
-
+/**
+ * Represents a single seat
+ */
 public class Seat 
 {
     private String state;

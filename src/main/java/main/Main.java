@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
+import model.theater_seats.TheaterSeats;
 
 public class Main 
 {
@@ -37,5 +38,7 @@ public class Main
         } catch (IOException e){
             e.printStackTrace();
         }
+        
+        TheaterSeats.getInstance();
     }   
 }
