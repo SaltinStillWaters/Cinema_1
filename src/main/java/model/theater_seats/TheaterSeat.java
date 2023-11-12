@@ -10,12 +10,22 @@ public class TheaterSeat
     private String date;
     private String time;
 
-    public TheaterSeat(String movieTitle, Seats seats, String date, String time)
+    public TheaterSeat(String movieTitle, String date, String time)
     {
         this.movieTitle = movieTitle;
-        this.seats = seats;
         this.date = date;
         this.time = time;
+        
+        this.seats = new Seats();
+    }
+    
+    public TheaterSeat(ArrayList<String> info)
+    {
+        this.movieTitle = info.get(0);
+        this.date = info.get(1);
+        this.time = info.get(2);
+        
+        this.seats = new Seats();
     }
     
     public String getDate()
@@ -36,6 +46,14 @@ public class TheaterSeat
     public String getTime()
     {
         return time;
+    }
+
+    @Override
+    public String toString()
+    {
+        return  movieTitle + "\n" +
+                date + "\n" +
+                time + "\n";
     }
     
      
