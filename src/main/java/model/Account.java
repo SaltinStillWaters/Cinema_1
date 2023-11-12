@@ -6,9 +6,9 @@ public class Account {
     private String userName;
     private String password;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
     
-    public Account(String firstName, String lastName, String userName, String password, String email, int phoneNumber){
+    public Account(String firstName, String lastName, String userName, String password, String email, String phoneNumber){
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -52,10 +52,10 @@ public class Account {
         this.email = email;
     }
     
-    public int getPhoneNumber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
-    public void setPhoneNumber(int phoneNumber){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
     
