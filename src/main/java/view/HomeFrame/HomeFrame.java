@@ -44,9 +44,9 @@ public class HomeFrame extends javax.swing.JFrame
         });
         getContentPane().add(uButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 79, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\turin\\OneDrive\\Documents\\NetBeansProjects\\Cinema_1\\src\\main\\java\\view\\Images\\1.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 390, 250));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 560, 390));
 
         uButton2.setText("uButton2");
         getContentPane().add(uButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
