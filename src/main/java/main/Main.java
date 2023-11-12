@@ -10,6 +10,8 @@ import java.util.Scanner;
 import javax.swing.*;
 import model.Account;
 import model.Accounts;
+import model.theater_seats.TheaterSeats;
+
 
 public class Main 
 {
@@ -101,5 +103,8 @@ public class Main
         {
             System.out.println(movies);
         }*/
+        
+        TheaterSeats.getInstance();
+
     }   
 }
