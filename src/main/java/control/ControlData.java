@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
-import view.HomeFrame;
+import view.HomeFrame.HomeFrame;
 import view.NextFrame;
 
 
