@@ -39,8 +39,8 @@ public class Main
             System.out.print("Enter Phone Number: ");
             String phoneNumber = scanner.nextLine();
             
-            Account newAcc = new Account(firstName, lastName, userName, password, email, phoneNumber);
-            accounts.addAccount(newAcc);
+            //Account newAcc = new Account(firstName, lastName, userName, password, email, phoneNumber);
+            accounts.addAccount(firstName, lastName, userName, password, email, phoneNumber);
             
             System.out.println("Account Created");
             System.out.print("Add another account: ");

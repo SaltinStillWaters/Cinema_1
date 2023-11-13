@@ -32,7 +32,7 @@ public class Account {
     }
     
     public String getUserName(){
-        return userName;
+        return userName.toLowerCase();
     }
     public void setUserName(String userName){
         this.userName = userName;
@@ -41,7 +41,7 @@ public class Account {
     public String getPassword(){
         return password;
     }
-    public void setPassword(){
+    public void setPassword(String password){
         this.password = password;
     }
     
@@ -59,7 +59,20 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
     
-    public boolean checkCredentials(String userName, String password){
+    /*public boolean checkCredentials(String userName, String password){
         return this.userName.equals(userName) && this.password.equals(password);
+    }*/
+    
+    public boolean checkCredentials(String userName, String password){
+    return this.userName.equalsIgnoreCase(userName) && this.password.equals(password);
     }
+    
+    /*public boolean checkCredentials(String userName, String password) {
+        userName = userName.toLowerCase();
+        
+    return this.userName.toLowerCase().equals(userName) &&
+           this.password.equals(password); // No case conversion for password
+}*/
+
+
 }

@@ -10,8 +10,11 @@ public class Accounts {
        this.accountMap = new HashMap<>(); 
    }
    
-   public void addAccount(Account account){ //stores all the account objects
-       accountMap.put(account.getUserName(), account);
+   public void addAccount(String firstName, String lastName, String userName, String password, String email, String phoneNumber){ //stores all the account objects
+       String lowerCaseUserName = userName.toLowerCase();
+       Account newAccount = new Account(firstName, lastName, lowerCaseUserName, password, email, phoneNumber);
+       
+       accountMap.put(lowerCaseUserName, newAccount);
    }
    
    public Account getAccountByUserName(String userName){ //used to retrieve an Account object - username
