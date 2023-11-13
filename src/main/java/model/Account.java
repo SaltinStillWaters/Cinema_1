@@ -60,7 +60,6 @@ public class Account {
     }
     
     public boolean checkCredentials(String userName, String password){
-        return this.userName.equalsIgnoreCase(userName) && this.password.equalsIgnoreCase(password);
+        return this.userName.equals(userName) && this.password.equals(password);
     }
-   
 }
