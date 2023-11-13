@@ -68,6 +68,7 @@ public class Main
         
         } while(choice != 0);
         
+        
         /*ArrayList<Movie> cinemaMovies = new ArrayList<>();
         ArrayList<String> categories = new ArrayList<>();
        
