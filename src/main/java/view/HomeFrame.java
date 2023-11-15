@@ -25,33 +25,17 @@ public class HomeFrame extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
-        uButton1 = new view_components.UButton();
         jLabel1 = new javax.swing.JLabel();
-        uButton2 = new view_components.UButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        uButton1.setText("uButton1");
-        uButton1.setType("next");
-        uButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                uButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(uButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 79, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Salti\\Documents\\NetBeansProjects\\Cinema_1\\resources\\2.png")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 890, 630));
-
-        uButton2.setText("uButton2");
-        getContentPane().add(uButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 250, 190));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -108,7 +92,6 @@ public class HomeFrame extends javax.swing.JFrame
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private view_components.UButton uButton1;
-    private view_components.UButton uButton2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,7 +9,9 @@ import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
+import uView.NowShowing;
 import view.HomeFrame;
+
 import view.NextFrame;
 
 
@@ -36,10 +38,10 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("HomeFrame", "NextFrame")
+            frameNames  = Stream.of( "NowShowing","HomeFrame", "NextFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new HomeFrame(), new NextFrame())
+            jFrames     = Stream.of(new NowShowing(), new HomeFrame(), new NextFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
