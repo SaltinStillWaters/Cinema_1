@@ -26,18 +26,69 @@ public class ShowingFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        uLabel1 = new view_components.ULabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1440, Short.MAX_VALUE)
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kGradientPanel2.setFocusTraversalPolicyProvider(true);
+        kGradientPanel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        kGradientPanel2.setkBorderRadius(0);
+        kGradientPanel2.setkEndColor(new java.awt.Color(11, 0, 26));
+        kGradientPanel2.setkGradientFocus(0);
+        kGradientPanel2.setkStartColor(new java.awt.Color(11, 0, 26));
+        kGradientPanel2.setOpaque(false);
+        kGradientPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kGradientPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        kGradientPanel3.setkEndColor(new java.awt.Color(51, 10, 52));
+        kGradientPanel3.setkGradientFocus(0);
+        kGradientPanel3.setkStartColor(new java.awt.Color(51, 10, 52));
+        kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("jLabel1");
+        kGradientPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/adrianealtiche/Downloads/mim.png")); // NOI18N
+        jLabel4.setText("jLabel4");
+        kGradientPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 0, 200, 110));
+
+        uLabel1.setForeground(new java.awt.Color(225, 225, 225));
+        uLabel1.setText("SEE SCHEDULE");
+        uLabel1.setAutoscrolls(true);
+        uLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        kGradientPanel3.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 240, 80));
+
+        kGradientPanel2.add(kGradientPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 860));
+
+        jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(237, 58, 133)));
+        kGradientPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 1130, 20));
+
+        jLabel2.setFont(new java.awt.Font("Palatino", 1, 65)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("NOW SHOWING");
+        kGradientPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 670, 80));
+
+        getContentPane().add(kGradientPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 860));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,5 +129,13 @@ public class ShowingFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel3;
+    private view_components.ULabel uLabel1;
     // End of variables declaration//GEN-END:variables
 }
