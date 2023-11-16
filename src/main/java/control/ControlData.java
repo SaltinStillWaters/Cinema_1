@@ -9,8 +9,7 @@ import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
-import view.HomeFrame.HomeFrame;
-import view.NextFrame;
+import view.SeatFrame.SeatFrame;
 
 
 
@@ -24,7 +23,6 @@ public class ControlData
     private Deque<String> frameHistory;
     private static ControlData instance;
     
-    
     //INIT
     /**
      * Constructor for singleton ControlData.
@@ -36,10 +34,10 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("HomeFrame", "NextFrame")
+            frameNames  = Stream.of("SeatFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new HomeFrame(), new NextFrame())
+            jFrames     = Stream.of(new SeatFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
@@ -63,6 +61,7 @@ public class ControlData
         
         return instance;
     }
+    
     
     
     //CUSTOM_METHODS

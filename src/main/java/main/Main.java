@@ -1,7 +1,7 @@
 package main;
 
 import control.ControlData;
-import model.Movies.Movie;
+import model.movies.Movie;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths; 
@@ -10,7 +10,7 @@ import java.util.Scanner;
 import javax.swing.*;
 import model.accounts.Account;
 import model.accounts.Accounts;
-import model.Movies.Movies;
+import model.movies.Movies;
 import model.theater_seats.TheaterSeats;
 
 

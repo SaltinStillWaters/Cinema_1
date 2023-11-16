@@ -52,6 +52,12 @@ public class TheaterSeats
         
         return instance;
     }
+
+    public TheaterSeat getTheaterSeat(TheaterSeat theaterSeat)
+    {
+        return getTheaterSeat(theaterSeat.getMovieTitle(), theaterSeat.getDate(), theaterSeat.getTime());
+    }
+    
     public TheaterSeat getTheaterSeat(String movieTitle, String date, String time)
     {
         TheaterSeat theaterSeat = null;
