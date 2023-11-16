@@ -1,10 +1,11 @@
 package view_components;
 
+import view_components.interfaces.SwitchFrame;
 import control.ClickedListener;
 import javax.swing.JLabel;
 
 
-public class ULabel extends JLabel implements Clickable
+public class ULabel extends JLabel implements SwitchFrame
 {
     private String destFrame;
     private String type;

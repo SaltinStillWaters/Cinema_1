@@ -1,10 +1,11 @@
 package view_components;
 
+import view_components.interfaces.SwitchFrame;
 import control.ClickedListener;
 import javax.swing.JButton;
 
 
-public class UButton extends JButton implements Clickable
+public class UButton extends JButton implements SwitchFrame
 {
     private String destFrame;
     private String type;

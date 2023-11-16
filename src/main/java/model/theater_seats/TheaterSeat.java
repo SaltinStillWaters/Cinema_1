@@ -27,6 +27,22 @@ public class TheaterSeat
         
         this.seats = new Seats();
     }
+
+    public void setDate(String date)
+    {
+        this.date = date;
+    }
+
+    public void setMovieTitle(String movieTitle)
+    {
+        this.movieTitle = movieTitle;
+    }
+
+    public void setTime(String time)
+    {
+        this.time = time;
+    }
+    
     
     public String getDate()
     {

@@ -2,7 +2,9 @@ package control;
         
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import view_components.Clickable;
+import model.theater_seats.TheaterSeat;
+import view_components.UMovieLabel;
+import view_components.interfaces.SwitchFrame;
 
 public class ClickedListener extends MouseAdapter
 {
@@ -10,13 +12,13 @@ public class ClickedListener extends MouseAdapter
     @Override
     public void mouseClicked(MouseEvent e)
     {
+        ControlData ctrlData = ControlData.getInstance();
+        
         Object source = e.getSource();
         
-        if (source instanceof Clickable)
+        if (source instanceof SwitchFrame)
         {
-            Clickable component = (Clickable) source;   //Component that triggered the event
-            
-            ControlData ctrlData = ControlData.getInstance();
+            SwitchFrame component = (SwitchFrame) source;   //Component that triggered the event
 
             
             //Determine destFrame
@@ -38,6 +40,15 @@ public class ClickedListener extends MouseAdapter
             }
             
             ControlFrame.changeFrame(destFrame);
+        }
+        else if (source instanceof UMovieLabel)
+        {
+            ControlSeats ctrlSeats = ControlSeats.getInstance();
+            
+            UMovieLabel movieLabel = (UMovieLabel) source;
+            
+            TheaterSeat tSeat = ctrlSeats.getCurrTheaterSeat();
+            tSeat.setMovieTitle(movieLabel.getMovieTitle());
         }
         else
         {
