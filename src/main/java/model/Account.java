@@ -58,21 +58,9 @@ public class Account {
     public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
-    
-    /*public boolean checkCredentials(String userName, String password){
-        return this.userName.equals(userName) && this.password.equals(password);
-    }*/
-    
+        
     public boolean checkCredentials(String userName, String password){
-    return this.userName.equalsIgnoreCase(userName) && this.password.equals(password);
+        return this.userName.equalsIgnoreCase(userName) && this.password.equals(password);
     }
     
-    /*public boolean checkCredentials(String userName, String password) {
-        userName = userName.toLowerCase();
-        
-    return this.userName.toLowerCase().equals(userName) &&
-           this.password.equals(password); // No case conversion for password
-}*/
-
-
 }

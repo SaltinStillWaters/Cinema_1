@@ -10,18 +10,16 @@ public class Accounts {
        this.accountMap = new HashMap<>(); 
    }
    
-   public void addAccount(String firstName, String lastName, String userName, String password, String email, String phoneNumber){ //stores all the account objects
-       String lowerCaseUserName = userName.toLowerCase();
-       Account newAccount = new Account(firstName, lastName, lowerCaseUserName, password, email, phoneNumber);
-       
-       accountMap.put(lowerCaseUserName, newAccount);
-   }
+    public void addAccount(Account account) {
+        accountMap.put(account.getUserName(), account);
+    }
    
    public Account getAccountByUserName(String userName){ //used to retrieve an Account object - username
        return accountMap.get(userName);
    }
    
    public boolean logIn(String userName, String password){ //login method - checks if the credentials are true, method found in Account class
+       userName = userName.toLowerCase();
        Account account = accountMap.get(userName);
        return account != null && account.checkCredentials(userName, password);
    }
