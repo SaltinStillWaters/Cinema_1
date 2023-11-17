@@ -12,6 +12,14 @@ import model.Movies.Movie;
 
 public class Main 
 {
+    public static String encryptPassword(String password){
+        StringBuilder encryptedPw = new StringBuilder();
+        for (int i = 0; i < password.length(); i++){
+            encryptedPw.append("*");
+        }
+        return encryptedPw.toString();
+    }
+    
     public static void main(String args[])  
     {
         ControlData ctrlData = ControlData.getInstance();
