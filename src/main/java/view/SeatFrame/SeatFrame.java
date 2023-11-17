@@ -16,6 +16,7 @@ import view_components.USeat;
 public class SeatFrame extends javax.swing.JFrame
 {
 
+    private JLabel uSeat2;
     /**
      * Creates new form SeatFrame
      */
@@ -23,13 +24,10 @@ public class SeatFrame extends javax.swing.JFrame
     {
         initComponents();
         
-//        Seat seat = new Seat("A1");
-//        ImageIcon img = new ImageIcon("resources/SeatFrame/seat_available.png");
-//        uSeat.setIcon(img);
-//        this.add(uSeat);
-//        
-//        JLabel lbl = new JLabel(img);
-//        this.add(lbl);
+        uSeat2 = new USeat();
+        uSeat2.setIcon(new ImageIcon(getClass().getResource("/SeatFrame/seat_available.png")));
+        uSeat2.setPreferredSize(preferredSize);
+        this.add(uSeat2);
         //init Seats
 //        ControlSeats ctrlSeats = ControlSeats.getInstance();
 //        TheaterSeat tSeatCurr = ctrlSeats.getCurrTheaterSeat();
@@ -64,45 +62,17 @@ public class SeatFrame extends javax.swing.JFrame
     private void initComponents()
     {
 
-        uSeat1 = new view_components.USeat();
-        kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        uSeat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SeatFrame/seat_available.png"))); // NOI18N
-        uSeat1.setText("uSeat1");
-
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(239, 239, 239)
-                .addComponent(uSeat1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(193, Short.MAX_VALUE))
+            .addGap(0, 894, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(uSeat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 154, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 545, Short.MAX_VALUE)
         );
 
         pack();
@@ -110,7 +80,5 @@ public class SeatFrame extends javax.swing.JFrame
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.k33ptoo.components.KGradientPanel kGradientPanel1;
-    private view_components.USeat uSeat1;
     // End of variables declaration//GEN-END:variables
 }
