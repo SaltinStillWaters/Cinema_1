@@ -26,7 +26,7 @@ public class SeatFrame extends javax.swing.JFrame
         
         uSeat2 = new USeat();
         uSeat2.setIcon(new ImageIcon(getClass().getResource("/SeatFrame/seat_available.png")));
-        uSeat2.setPreferredSize(preferredSize);
+//        uSeat2.setPreferredSize(preferredSize);
         this.add(uSeat2);
         //init Seats
 //        ControlSeats ctrlSeats = ControlSeats.getInstance();
