@@ -12,6 +12,16 @@ import model.Movies.Movie;
 
 public class Main 
 {
+    /**
+     * Converts password string into asterisk string.
+     * Counts the length of the password input and replace
+     * each character with asterisk.
+     * 
+     * @param password 
+     * @return an asterisks string with the same length as the password input. 
+     * @author Vian Vargas
+     * @version 2023.11.16
+     */
     public static String encryptPassword(String password){
         StringBuilder encryptedPw = new StringBuilder();
         for (int i = 0; i < password.length(); i++){
@@ -27,7 +37,7 @@ public class Main
         JFrame mainFrame = ctrlData.getFrameByName(ctrlData.getCurrFrame());
         mainFrame.setVisible(true);
         
-         ArrayList<Movie> cinemaMovies = new ArrayList<>();
+        ArrayList<Movie> cinemaMovies = new ArrayList<>();
         ArrayList<String> categories = new ArrayList<>();
        
         Path filePath = Paths.get("src/main/java/model/Movies/moviesInfos.txt"); 

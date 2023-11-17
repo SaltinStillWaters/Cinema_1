@@ -8,6 +8,16 @@ public class Account {
     private String email;
     private String phoneNumber;
     
+    /**
+     * Constructor method, initialize variables of an object.
+     * 
+     * @param firstName
+     * @param lastName
+     * @param userName
+     * @param password
+     * @param email
+     * @param phoneNumber 
+     */
     public Account(String firstName, String lastName, String userName, String password, String email, String phoneNumber){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,7 +68,15 @@ public class Account {
     public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
-        
+    
+    /**
+     * Checks if login credential inputs are equal to the stored username and 
+     * password from an object.
+     * 
+     * @param userName
+     * @param password
+     * @return true if the arguments are equal to the given conditions.
+     */
     public boolean checkCredentials(String userName, String password){
         return this.userName.equalsIgnoreCase(userName) && this.password.equals(password);
     }
