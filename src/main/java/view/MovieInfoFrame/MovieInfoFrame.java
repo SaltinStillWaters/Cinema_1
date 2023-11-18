@@ -4,6 +4,10 @@
  */
 package view.MovieInfoFrame;
 
+import control.ControlData;
+import javax.swing.ImageIcon;
+import model.Movies.Movie;
+
 /**
  *
  * @author adrianealtiche
@@ -15,8 +19,21 @@ public class MovieInfoFrame extends javax.swing.JFrame {
      */
     public MovieInfoFrame() {
         initComponents();
+        
+        
     }
 
+    public void changeMovie(Movie movie)
+    {
+        jLabel8.setText(movie.getTitle());
+        jLabel9.setText("MTRCB Rating: " + movie.getMtcrbRating());
+        jLabel11.setText("Genre: " + movie.getGenre());
+        
+        movieLabel.setIcon(new ImageIcon("src/main/resources/ShowingFrame/Thumbnail/" + movie.getThumbnailName()));
+        movieLabel.scale();
+        
+        jLabel17.setText(movie.getSypnosis());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,7 +41,8 @@ public class MovieInfoFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
@@ -33,7 +51,6 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        uMovieLabel4 = new view_components.UMovieLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -50,6 +67,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        movieLabel = new view_components.ScaleableLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,10 +99,6 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel8.setText("AVENGERS: END GAME");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 640, 80));
 
-        uMovieLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MovieInfoFrame/thumbnailmovieinfoframe/endgamemoveiinfo.png"))); // NOI18N
-        uMovieLabel4.setText("uMovieLabel1");
-        jPanel1.add(uMovieLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 310, 400));
-
         jLabel9.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(225, 225, 225));
         jLabel9.setText("MTRCB Rating: PG-13");
@@ -98,7 +112,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(225, 225, 225));
         jLabel12.setText("Stars: Robert Downey Jr. ");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 380, 80));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 650, 80));
 
         jLabel15.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(225, 225, 225));
@@ -113,7 +127,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(225, 225, 225));
         jLabel11.setText("Genre: Action - Adventure ");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 320, 80));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 590, 80));
 
         jLabel13.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(225, 225, 225));
@@ -146,8 +160,10 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jComboBox2.setBackground(new java.awt.Color(237, 58, 133));
         jComboBox2.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT DATE", "DECEMBER 1, 2023", "DECEMBER 2, 2023", "DECEMBER 3, 2023", "DECEMBER 4, 2024" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBox2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jComboBox2ActionPerformed(evt);
             }
         });
@@ -156,8 +172,10 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(237, 58, 133));
         jComboBox1.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHEDULE", "1:45 PM RESERVED SEATING", "4:10 PM RESERVED SEATING", "6:30 PM RESERVED SEATING", "8:45 PM RESERVED SEATING", " " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBox1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jComboBox1ActionPerformed(evt);
             }
         });
@@ -172,6 +190,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 1410, 1310, 50));
+        jPanel1.add(movieLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 270, 370));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -247,7 +266,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private view_components.ScaleableLabel movieLabel;
     private view_components.ULabel uLabel1;
-    private view_components.UMovieLabel uMovieLabel4;
     // End of variables declaration//GEN-END:variables
 }

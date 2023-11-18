@@ -123,19 +123,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="view_components.UMovieLabel" name="uMovieLabel4">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/MovieInfoFrame/thumbnailmovieinfoframe/endgamemoveiinfo.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="60" y="240" width="310" height="400"/>
-                </Constraint>
-              </Constraints>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -180,7 +167,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="430" y="410" width="380" height="80"/>
+                  <AbsoluteConstraints x="430" y="410" width="650" height="80"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -228,7 +215,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="730" y="260" width="320" height="80"/>
+                  <AbsoluteConstraints x="730" y="260" width="590" height="80"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -419,6 +406,13 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="view_components.ScaleableLabel" name="movieLabel">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="200" width="270" height="370"/>
+                </Constraint>
+              </Constraints>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
