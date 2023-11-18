@@ -207,7 +207,7 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 3320, 340, 240));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Gif_Trailer.gif"))); // NOI18N
-        kGradientPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, -1, -1));
+        kGradientPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
 
         scalableLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Imax_Picture.png"))); // NOI18N
         scalableLabel1.setText("scalableLabel1");
