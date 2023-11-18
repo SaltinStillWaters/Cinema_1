@@ -5,7 +5,11 @@
 package view.HomePage;
 
 import java.awt.Image;
+import java.awt.geom.RoundRectangle2D;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.BorderFactory;
+import javax.swing.border.BevelBorder;
 
 /**
  *
@@ -13,12 +17,19 @@ import javax.swing.ImageIcon;
  */
 public class HomePage extends javax.swing.JFrame {
 
+         int positionX = 0, positionY = 0;
+    
     /**
      * Creates new form HomePage 
      */
     public HomePage() {
+        setUndecorated(true);
         initComponents();
-       
+         uLogin.setDestFrame("Login");
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
+        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 50, 20));
+        
        //scalableLabel1.scale();
         
     }
@@ -85,6 +96,7 @@ public class HomePage extends javax.swing.JFrame {
 
         uLogin.setForeground(new java.awt.Color(237, 237, 237));
         uLogin.setText("<html>\n<p style = \"font-family:Yu Gothic Light Bold;\">\n<font size = \"3.5\">\nLOGIN\n</font size>\n</p>\n</html>\n");
+        uLogin.setDestFrame("Login");
         kGradientPanel1.add(uLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 280, -1, -1));
 
         uSignup.setForeground(new java.awt.Color(237, 237, 237));
@@ -132,7 +144,7 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel3.setkEndColor(new java.awt.Color(51, 51, 51));
         kGradientPanel3.setkStartColor(new java.awt.Color(101, 87, 101));
         kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        kGradientPanel1.add(kGradientPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 2550, 1410, 550));
+        kGradientPanel1.add(kGradientPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 1420, 550));
 
         bDescrp.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         bDescrp.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,7 +165,7 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel1.add(gif1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 1700, -1, -1));
 
         blur2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Background.gif"))); // NOI18N
-        kGradientPanel1.add(blur2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1700, -1, -1));
+        kGradientPanel1.add(blur2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1700, -1, -1));
 
         text1.setFont(new java.awt.Font("sansserif", 1, 16)); // NOI18N
         text1.setForeground(new java.awt.Color(204, 204, 204));
@@ -264,7 +276,6 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JScrollPane jScrollPane1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel3;
