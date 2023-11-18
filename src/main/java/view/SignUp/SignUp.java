@@ -117,8 +117,7 @@ public class SignUp extends javax.swing.JFrame {
         uLabel2.setFont(new java.awt.Font("YuGothic", 3, 12)); // NOI18N
         kGradientPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 600, 60, -1));
 
-        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignUp/buttonsignsignuo=p.png"))); // NOI18N
-        uLabel1.setText("uLabel1");
+        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignUp/signupbutton.png"))); // NOI18N
         kGradientPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 310, 490, -1));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 14)); // NOI18N
@@ -132,7 +131,7 @@ public class SignUp extends javax.swing.JFrame {
         kGradientPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 360, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignUp/finalfinalsignup.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignUp/designdesign.png"))); // NOI18N
         kGradientPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, -30, 1420, 750));
 
         getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 800));
