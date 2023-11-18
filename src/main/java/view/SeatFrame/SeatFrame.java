@@ -4,9 +4,7 @@ import control.ControlSeats;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.util.ArrayList;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import model.theater_seats.Seat;
 import model.theater_seats.Seats;
@@ -15,7 +13,6 @@ import view_components.USeat;
 
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
 public class SeatFrame extends javax.swing.JFrame {

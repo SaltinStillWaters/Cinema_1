@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
 import view.SeatFrame.SeatFrame;
-import view.SeatFrame.SeatFrame2;
 
 
 
@@ -35,10 +34,10 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("NewClass_3", "SeatFrame")
+            frameNames  = Stream.of("SeatFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new SeatFrame(), new SeatFrame2())
+            jFrames     = Stream.of(new SeatFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
