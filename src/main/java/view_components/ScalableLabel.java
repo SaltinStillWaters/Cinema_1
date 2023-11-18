@@ -20,6 +20,8 @@ public class ScalableLabel extends JLabel {
         Image imgScale = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         this.setIcon(scaledIcon);
+        
+        
  }
     
 }

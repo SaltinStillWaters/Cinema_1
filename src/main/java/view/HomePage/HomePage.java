@@ -4,11 +4,14 @@
  */
 package view.HomePage;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
 /**
@@ -18,6 +21,7 @@ import javax.swing.border.BevelBorder;
 public class HomePage extends javax.swing.JFrame {
 
          int positionX = 0, positionY = 0;
+         
     
     /**
      * Creates new form HomePage 
@@ -25,13 +29,14 @@ public class HomePage extends javax.swing.JFrame {
     public HomePage() {
         setUndecorated(true);
         initComponents();
-         uLogin.setDestFrame("Login");
+        //scalableLabel2.scale();
+        //scalableLabel2.setOpaque(true);
+        //scalableLabel2.setBackground(new Color(255, 255, 255, 128));
+        
         this.setResizable(false); // Disable resize frame
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 50, 20));
-        
-       //scalableLabel1.scale();
-        
+        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 80, 80));
+       
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -286,4 +291,12 @@ public class HomePage extends javax.swing.JFrame {
     private view_components.ULabel uLogin;
     private view_components.ULabel uSignup;
     // End of variables declaration//GEN-END:variables
+
+private void LabelColor (JLabel label){
+    label.setBackground(new java.awt.Color(214,217,223));
+    }
+private void ResetColor (JLabel label){
+    label.setBackground(new java.awt.Color(54,70,78));
+    }
+
 }
