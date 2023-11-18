@@ -19,7 +19,7 @@ public class Main
         JFrame mainFrame = ctrlData.getFrameByName(ctrlData.getCurrFrame());
         mainFrame.setVisible(true);
         
-         ArrayList<Movie> cinemaMovies = new ArrayList<>();
+        ArrayList<Movie> cinemaMovies = new ArrayList<>();
         ArrayList<String> categories = new ArrayList<>();
        
         Path filePath = Paths.get("src/main/java/model/Movies/moviesInfos.txt"); 
