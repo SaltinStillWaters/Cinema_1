@@ -14,13 +14,12 @@ public class Main
 {
     /**
      * Converts password string into asterisk string.
-     * Counts the length of the password input and replace
+     * 
+     * This method counts the length of the password input and replace
      * each character with asterisk.
      * 
-     * @param password 
-     * @return an asterisks string with the same length as the password input. 
-     * @author Vian Vargas
-     * @version 2023.11.16
+     * @param password the password to be encrypted.
+     * @return an asterisks String with the same length as the password input. 
      */
     public static String encryptPassword(String password){
         StringBuilder encryptedPw = new StringBuilder();
@@ -55,7 +54,7 @@ public class Main
                 }
                 categories.add(line);
             }
-            if(!categories.isEmpty()) //will add last movie if there is no empty line at the end of the file
+            if(!categories.isEmpty()) 
             { 
                 Movie lastMovie = new Movie(categories); 
                 cinemaMovies.add(lastMovie);
