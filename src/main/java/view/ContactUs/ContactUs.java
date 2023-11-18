@@ -81,7 +81,7 @@ public class ContactUs extends javax.swing.JFrame {
         uLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jPanel1.add(uLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 2000));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 990));
 
         jLabel4.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(225, 225, 225));
