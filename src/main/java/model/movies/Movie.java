@@ -9,7 +9,7 @@ public class Movie
     private String sypnosis;
     private String mtcrbRating;
     private String genre;
-    
+
     public Movie(ArrayList<String> infos)
     {
         this.thumbnailName = infos.get(0);
@@ -19,7 +19,7 @@ public class Movie
         this.genre = infos.get(4);
     }
 
-    
+
     public String getMtcrbRating()
     {
         return mtcrbRating;
@@ -44,9 +44,9 @@ public class Movie
     {
         return title;
     }
-   
-    
-    
+
+
+
     @Override
     public String toString() 
     {
