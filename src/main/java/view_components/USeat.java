@@ -1,18 +1,26 @@
 package view_components;
 
+import control.ClickedListener;
 import javax.swing.ImageIcon;
 import view_components.interfaces.ChangeState;
-import javax.swing.JLabel;
 import model.theater_seats.Seat;
 
 
-public class USeat extends JLabel implements ChangeState
+public class USeat extends ScaleableLabel implements ChangeState
 {
     private Seat seat;
-
+    public static int imageWidth;
+    public static int imageHeight;
+    
+    static 
+    {
+        imageWidth = 25;
+        imageHeight = 35;
+    }
+    
     public USeat()
     {
-        this.setImage("src/main/java/view/SeatFrame/seat_available.png");
+        this.addMouseListener(new ClickedListener());
     }
     
     public void setImage(String filename)
@@ -37,6 +45,10 @@ public class USeat extends JLabel implements ChangeState
     {
         seat.setState(newState);
     }
-    
-    
+
+    @Override
+    public String getState()
+    {
+        return seat.getState();
+    }
 }
