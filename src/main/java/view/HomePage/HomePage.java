@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
@@ -29,13 +30,23 @@ public class HomePage extends javax.swing.JFrame {
     public HomePage() {
         setUndecorated(true);
         initComponents();
-        //scalableLabel2.scale();
+        
+        
+        kGradientPanel8.hide();
+        kGradientPanel2.hide();
+        kGradientPanel12.hide();
+        
+        
+        scalableLabel2.scale();
+        scalableLabel4.scale();
+        scalableLabel3.scale();
+        MembersText.scale();
         //scalableLabel2.setOpaque(true);
         //scalableLabel2.setBackground(new Color(255, 255, 255, 128));
         
         this.setResizable(false); // Disable resize frame
         setLocationRelativeTo(null);
-        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 80, 80));
+        setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 50, 50));
        
     }
     /**
@@ -64,21 +75,69 @@ public class HomePage extends javax.swing.JFrame {
         Blur5 = new javax.swing.JLabel();
         Blur6 = new javax.swing.JLabel();
         Blur7 = new javax.swing.JLabel();
-        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        Title = new javax.swing.JLabel();
         bDescrp = new javax.swing.JLabel();
         bDescrp2 = new javax.swing.JLabel();
-        blur1 = new javax.swing.JLabel();
         gif1 = new javax.swing.JLabel();
         blur2 = new javax.swing.JLabel();
         text1 = new javax.swing.JLabel();
         blur3 = new javax.swing.JLabel();
+        kGradientPanel3 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        kGradientPanel5 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel6 = new com.k33ptoo.components.KGradientPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Line6 = new javax.swing.JLabel();
         kGradientPanel4 = new com.k33ptoo.components.KGradientPanel();
         Descrp2 = new javax.swing.JLabel();
         Line3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        scalableLabel3 = new view_components.ScalableLabel();
         scalableLabel1 = new view_components.ScalableLabel();
+        kGradientPanel16 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel7 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel8 = new com.k33ptoo.components.KGradientPanel();
+        scalableLabel2 = new view_components.ScalableLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        kGradientPanel9 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel10 = new com.k33ptoo.components.KGradientPanel();
+        jLabel2 = new javax.swing.JLabel();
+        Line4 = new javax.swing.JLabel();
+        kGradientPanel11 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel12 = new com.k33ptoo.components.KGradientPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        kGradientPanel13 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel14 = new com.k33ptoo.components.KGradientPanel();
+        Line5 = new javax.swing.JLabel();
+        blur4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        kGradientPanel15 = new com.k33ptoo.components.KGradientPanel();
+        scalableLabel4 = new view_components.ScalableLabel();
+        Title_Label1 = new javax.swing.JLabel();
+        Title_Label3 = new javax.swing.JLabel();
+        Title_Label4 = new javax.swing.JLabel();
+        Title_Label5 = new javax.swing.JLabel();
+        Title_Label6 = new javax.swing.JLabel();
+        Title_Label8 = new javax.swing.JLabel();
+        Title_Label9 = new javax.swing.JLabel();
+        Title_Label10 = new javax.swing.JLabel();
+        kGradientPanel17 = new com.k33ptoo.components.KGradientPanel();
+        kGradientPanel18 = new com.k33ptoo.components.KGradientPanel();
+        MembersText = new view_components.ScalableLabel();
+        Line7 = new javax.swing.JLabel();
+        Line8 = new javax.swing.JLabel();
+        Title_Label7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -146,10 +205,10 @@ public class HomePage extends javax.swing.JFrame {
         Blur7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Gif_1Blur.gif"))); // NOI18N
         kGradientPanel1.add(Blur7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, -1, -1));
 
-        kGradientPanel3.setkEndColor(new java.awt.Color(51, 51, 51));
-        kGradientPanel3.setkStartColor(new java.awt.Color(101, 87, 101));
-        kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        kGradientPanel1.add(kGradientPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 1420, 550));
+        Title.setFont(new java.awt.Font("Yu Gothic Medium", 1, 23)); // NOI18N
+        Title.setForeground(new java.awt.Color(137, 129, 150));
+        Title.setText("<html>  <center> SEENEMA MUCH MORE THAN A BIG SCREEN </center> </html>");
+        kGradientPanel1.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 1970, 530, 50));
 
         bDescrp.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         bDescrp.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,11 +219,6 @@ public class HomePage extends javax.swing.JFrame {
         bDescrp2.setForeground(new java.awt.Color(255, 255, 255));
         bDescrp2.setText("<html> \n<center> \n<h style = \"text-align:justify\">\nDolby Atmos Transports you into the story with moving audio that flows all around you with breathtaking realism. Have a powerfully moving entertainment experience in our cinemas. \n</center>\n</h>\n </html>");
         kGradientPanel1.add(bDescrp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 2110, 510, 180));
-
-        blur1.setFont(new java.awt.Font("Yu Gothic Light", 1, 23)); // NOI18N
-        blur1.setForeground(new java.awt.Color(137, 129, 150));
-        blur1.setText("<html>  <center> SEENEMA MUCH MORE THAN A BIG SCREEN </center> </html>");
-        kGradientPanel1.add(blur1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 1970, 510, 50));
 
         gif1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Background.gif"))); // NOI18N
         kGradientPanel1.add(gif1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 1700, -1, -1));
@@ -178,10 +232,66 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel1.add(text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 2180, 430, 102));
 
         blur3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Background.gif"))); // NOI18N
-        kGradientPanel1.add(blur3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 1700, -1, -1));
+        kGradientPanel1.add(blur3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 1670, 1200, 910));
 
-        kGradientPanel4.setkEndColor(new java.awt.Color(51, 51, 51));
-        kGradientPanel4.setkStartColor(new java.awt.Color(0, 0, 0));
+        kGradientPanel3.setkEndColor(new java.awt.Color(102, 0, 102));
+        kGradientPanel3.setkGradientFocus(15);
+        kGradientPanel3.setkStartColor(new java.awt.Color(7, 7, 7));
+        kGradientPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                kGradientPanel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                kGradientPanel3MouseExited(evt);
+            }
+        });
+        kGradientPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kGradientPanel2.setkEndColor(new java.awt.Color(73, 0, 73));
+        kGradientPanel2.setkGradientFocus(10);
+        kGradientPanel2.setkStartColor(new java.awt.Color(61, 0, 61));
+        kGradientPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel15.setText("Priority Access");
+        kGradientPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, 40));
+
+        jLabel16.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel16.setText("Member-Only Benefits & Services");
+        kGradientPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, 40));
+
+        jLabel17.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel17.setText("Exclusive Discounts");
+        kGradientPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, 40));
+
+        kGradientPanel3.add(kGradientPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 500, 430));
+
+        kGradientPanel5.setkEndColor(new java.awt.Color(71, 34, 79));
+        kGradientPanel5.setkGradientFocus(300);
+        kGradientPanel5.setkStartColor(new java.awt.Color(63, 57, 63));
+        kGradientPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        kGradientPanel5.add(kGradientPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 520, 410));
+
+        kGradientPanel3.add(kGradientPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 520, 750));
+
+        jLabel1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("Benefits");
+        kGradientPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, -1, -1));
+
+        Line6.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        Line6.setForeground(new java.awt.Color(255, 255, 255));
+        Line6.setText("_____________________");
+        kGradientPanel3.add(Line6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+
+        kGradientPanel1.add(kGradientPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 2550, 500, 750));
+
+        kGradientPanel4.setkEndColor(new java.awt.Color(0, 0, 0));
+        kGradientPanel4.setkGradientFocus(300);
+        kGradientPanel4.setkStartColor(new java.awt.Color(51, 51, 51));
         kGradientPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Descrp2.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
@@ -209,11 +319,230 @@ public class HomePage extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Gif_Trailer.gif"))); // NOI18N
         kGradientPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, -1));
 
+        scalableLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Shadow.png"))); // NOI18N
+        scalableLabel3.setText("scalableLabel3");
+        kGradientPanel4.add(scalableLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 1240, 810));
+
         scalableLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Imax_Picture.png"))); // NOI18N
         scalableLabel1.setText("scalableLabel1");
         kGradientPanel4.add(scalableLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 230, 500, 170));
 
-        kGradientPanel1.add(kGradientPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 850, 1420, 850));
+        kGradientPanel16.setkEndColor(new java.awt.Color(34, 34, 34));
+        kGradientPanel16.setkGradientFocus(8);
+        kGradientPanel16.setkStartColor(new java.awt.Color(51, 51, 51));
+        kGradientPanel16.setLayout(null);
+        kGradientPanel4.add(kGradientPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1470, 60));
+
+        kGradientPanel1.add(kGradientPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 850, 1440, 850));
+
+        kGradientPanel7.setkEndColor(new java.awt.Color(102, 0, 102));
+        kGradientPanel7.setkGradientFocus(10);
+        kGradientPanel7.setkStartColor(new java.awt.Color(0, 0, 0));
+        kGradientPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                kGradientPanel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                kGradientPanel7MouseExited(evt);
+            }
+        });
+        kGradientPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kGradientPanel8.setkEndColor(new java.awt.Color(73, 0, 73));
+        kGradientPanel8.setkGradientFocus(10);
+        kGradientPanel8.setkStartColor(new java.awt.Color(61, 0, 61));
+        kGradientPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        scalableLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Card.png"))); // NOI18N
+        scalableLabel2.setText("scalableLabel2");
+        kGradientPanel8.add(scalableLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 380, 240));
+
+        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setText("Annual Membership Fee");
+        kGradientPanel8.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("Seenema Membership Card");
+        kGradientPanel8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+
+        kGradientPanel7.add(kGradientPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 480, 430));
+
+        kGradientPanel9.setkEndColor(new java.awt.Color(71, 34, 79));
+        kGradientPanel9.setkGradientFocus(300);
+        kGradientPanel9.setkStartColor(new java.awt.Color(63, 57, 63));
+        kGradientPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        kGradientPanel9.add(kGradientPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 520, 410));
+
+        kGradientPanel7.add(kGradientPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 520, 750));
+
+        jLabel2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("CardHolder");
+        kGradientPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+
+        Line4.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        Line4.setForeground(new java.awt.Color(255, 255, 255));
+        Line4.setText("_____________________");
+        kGradientPanel7.add(Line4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 440, 50));
+
+        kGradientPanel1.add(kGradientPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 460, 750));
+
+        kGradientPanel11.setkEndColor(new java.awt.Color(102, 0, 102));
+        kGradientPanel11.setkGradientFocus(100);
+        kGradientPanel11.setkStartColor(new java.awt.Color(0, 0, 0));
+        kGradientPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                kGradientPanel11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                kGradientPanel11MouseExited(evt);
+            }
+        });
+        kGradientPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kGradientPanel12.setkEndColor(new java.awt.Color(73, 0, 73));
+        kGradientPanel12.setkGradientFocus(10);
+        kGradientPanel12.setkStartColor(new java.awt.Color(61, 0, 61));
+        kGradientPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("No waiting queue");
+        kGradientPanel12.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, -1, 40));
+
+        jLabel9.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("Valid to all SEENEMA theaters");
+        kGradientPanel12.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, 40));
+
+        jLabel11.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel11.setText("<html>\n<p style = \"font-family:Yu Gothic Light;\">\n<center>\nValid at all SEENEMA theaters—your ticket to seamless entertainment, anywhere you choose to watch.\n</center>\n</p>\n</html>");
+        kGradientPanel12.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 370, 110));
+
+        jLabel12.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel12.setText("Easy to acces website");
+        kGradientPanel12.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, 40));
+
+        jLabel13.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setText("<html> <p style = \"font-family:Yu Gothic Light;\"> <center>Instant access, zero queues. Effortlessly navigate our website for swift, hassle-free information—your time, your control. </center> </p> </html>");
+        kGradientPanel12.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 370, 110));
+
+        jLabel14.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel14.setText("<html>\n<p style = \"font-family:Yu Gothic Light;\">\n<center>\nNo queues, no waiting—get instant access on our website. Your time, your control.\n</center>\n</p>\n</html>");
+        kGradientPanel12.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 370, 110));
+
+        kGradientPanel11.add(kGradientPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 340, 520, 430));
+
+        kGradientPanel13.setkEndColor(new java.awt.Color(71, 34, 79));
+        kGradientPanel13.setkGradientFocus(300);
+        kGradientPanel13.setkStartColor(new java.awt.Color(63, 57, 63));
+        kGradientPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        kGradientPanel13.add(kGradientPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 520, 410));
+
+        kGradientPanel11.add(kGradientPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2550, 520, 750));
+
+        Line5.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        Line5.setForeground(new java.awt.Color(255, 255, 255));
+        Line5.setText("_______________________");
+        kGradientPanel11.add(Line5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 460, 50));
+
+        blur4.setFont(new java.awt.Font("Yu Gothic Light", 1, 38)); // NOI18N
+        blur4.setForeground(new java.awt.Color(204, 204, 204));
+        blur4.setText("<html>  <center> Introducing Membership Seenema </center> </html>");
+        kGradientPanel11.add(blur4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 400, 110));
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setText("Features");
+        kGradientPanel11.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
+
+        kGradientPanel1.add(kGradientPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 2550, 500, 750));
+
+        kGradientPanel15.setkEndColor(new java.awt.Color(95, 15, 64));
+        kGradientPanel15.setkStartColor(new java.awt.Color(49, 14, 104));
+        kGradientPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        scalableLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/Members.png"))); // NOI18N
+        scalableLabel4.setText("scalableLabel4");
+        kGradientPanel15.add(scalableLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 420, 630));
+
+        Title_Label1.setFont(new java.awt.Font("Yu Gothic Light", 1, 24)); // NOI18N
+        Title_Label1.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label1.setText("Member: Adriane Altiche");
+        kGradientPanel15.add(Title_Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 610, 360, 50));
+
+        Title_Label3.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        Title_Label3.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label3.setText("Role: Front-end Programmer/Graphic Designer ");
+        kGradientPanel15.add(Title_Label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 650, 440, 50));
+
+        Title_Label4.setFont(new java.awt.Font("Yu Gothic Light", 1, 24)); // NOI18N
+        Title_Label4.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label4.setText("Member: Fraizer Quinn Turingan");
+        kGradientPanel15.add(Title_Label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 360, 360, 50));
+
+        Title_Label5.setFont(new java.awt.Font("Yu Gothic Light", 1, 24)); // NOI18N
+        Title_Label5.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label5.setText("Member: Vian Andrei Vargas");
+        kGradientPanel15.add(Title_Label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 490, 360, 50));
+
+        Title_Label6.setFont(new java.awt.Font("Yu Gothic Light", 1, 24)); // NOI18N
+        Title_Label6.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label6.setText("Project Leader: Mychal Andres Pejana");
+        kGradientPanel15.add(Title_Label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, 430, 50));
+
+        Title_Label8.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        Title_Label8.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label8.setText("Role: Lead Front-end Programmer");
+        kGradientPanel15.add(Title_Label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 440, 50));
+
+        Title_Label9.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        Title_Label9.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label9.setText("Role: Back-end Programmer");
+        kGradientPanel15.add(Title_Label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 520, 240, 50));
+
+        Title_Label10.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        Title_Label10.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label10.setText("Role: Project Leader/Lead Back-end Programmer ");
+        kGradientPanel15.add(Title_Label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 440, 50));
+
+        kGradientPanel17.setkBorderRadius(0);
+        kGradientPanel17.setkEndColor(new java.awt.Color(95, 15, 64));
+        kGradientPanel17.setkGradientFocus(942);
+        kGradientPanel17.setkStartColor(new java.awt.Color(49, 14, 104));
+        kGradientPanel15.add(kGradientPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1510, 60));
+
+        kGradientPanel18.setkEndColor(new java.awt.Color(57, 9, 73));
+        kGradientPanel18.setkGradientFocus(1);
+        kGradientPanel18.setkStartColor(new java.awt.Color(95, 15, 64));
+        kGradientPanel15.add(kGradientPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 860, 1510, 80));
+
+        MembersText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HomePage/MembersText.png"))); // NOI18N
+        MembersText.setText("scalableLabel5");
+        kGradientPanel15.add(MembersText, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, 180, 760, 590));
+
+        Line7.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        Line7.setForeground(new java.awt.Color(255, 255, 255));
+        Line7.setText("_______________________");
+        kGradientPanel15.add(Line7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, -1, -1));
+
+        Line8.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
+        Line8.setForeground(new java.awt.Color(255, 255, 255));
+        Line8.setText("_______________________");
+        kGradientPanel15.add(Line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, -1, -1));
+
+        kGradientPanel1.add(kGradientPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 3300, 1470, 920));
+
+        Title_Label7.setFont(new java.awt.Font("Yu Gothic Light", 0, 14)); // NOI18N
+        Title_Label7.setForeground(new java.awt.Color(255, 255, 255));
+        Title_Label7.setText("<html>\n<p style = \"font-family:Yu Gothic Light;\">\n<center>\nDisclaimer: The contents of all pages published by students or individuals are solely the responsibility of the page authors. Statements made and opinions expressed are strictly those of the authors and not Far Eastern University.\n</center>\n</p>\n</html>");
+        kGradientPanel1.add(Title_Label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 4190, 1410, 110));
 
         jScrollPane1.setViewportView(kGradientPanel1);
 
@@ -221,6 +550,141 @@ public class HomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    
+    int y = 0;
+    private void kGradientPanel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel7MouseExited
+
+        if ( y == 0);
+
+        kGradientPanel8.setSize(460, 150);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try{
+                    for (int i = 460; i>=0; i--){
+                        Thread.sleep(1);
+                        kGradientPanel8.setSize(460, i);
+                    }
+                } catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+
+        };
+        th.start();
+        y = 460;
+    }//GEN-LAST:event_kGradientPanel7MouseExited
+
+    private void kGradientPanel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel7MouseEntered
+        kGradientPanel8.show();
+        kGradientPanel8.setSize(460, y);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try {
+                    for (int i = 0; i <= y; i++){
+                        Thread.sleep(1);
+                        kGradientPanel8.setSize(460, i);
+                    }
+                }catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        };
+        th.start();
+        y = 460;
+    }//GEN-LAST:event_kGradientPanel7MouseEntered
+
+    private void kGradientPanel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel11MouseEntered
+         kGradientPanel12.show();
+        kGradientPanel12.setSize(510, y);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try {
+                    for (int i = 0; i <= y; i++){
+                        Thread.sleep(1);
+                        kGradientPanel12.setSize(510, i);
+                    }
+                }catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        };
+        th.start();
+        y = 510;
+    }//GEN-LAST:event_kGradientPanel11MouseEntered
+
+    private void kGradientPanel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel11MouseExited
+        if ( y == 0);
+
+        kGradientPanel12.setSize(510, 150);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try{
+                    for (int i = 510; i>=0; i--){
+                        Thread.sleep(1);
+                        kGradientPanel12.setSize(510, i);
+                    }
+                } catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+
+        };
+        th.start();
+        y = 510;
+    }//GEN-LAST:event_kGradientPanel11MouseExited
+
+    private void kGradientPanel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel3MouseExited
+         if ( y == 0);
+
+        kGradientPanel2.setSize(510, 150);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try{
+                    for (int i = 510; i>=0; i--){
+                        Thread.sleep(1);
+                        kGradientPanel2.setSize(510, i);
+                    }
+                } catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+
+        };
+        th.start();
+        y = 510;
+    }//GEN-LAST:event_kGradientPanel3MouseExited
+
+    private void kGradientPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel3MouseEntered
+        kGradientPanel2.show();
+        kGradientPanel2.setSize(510, y);
+        Thread th = new Thread(){
+
+            @Override
+            public void run(){
+                try {
+                    for (int i = 0; i <= y; i++){
+                        Thread.sleep(1);
+                        kGradientPanel2.setSize(510, i);
+                    }
+                }catch (Exception e){
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        };
+        th.start();
+        y = 510;
+    }//GEN-LAST:event_kGradientPanel3MouseEntered
 
     /**
      * @param args the command line arguments
@@ -271,21 +735,69 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel Line;
     private javax.swing.JLabel Line1;
     private javax.swing.JLabel Line3;
+    private javax.swing.JLabel Line4;
+    private javax.swing.JLabel Line5;
+    private javax.swing.JLabel Line6;
+    private javax.swing.JLabel Line7;
+    private javax.swing.JLabel Line8;
+    private view_components.ScalableLabel MembersText;
+    private javax.swing.JLabel Title;
     private javax.swing.JLabel Title_Label;
+    private javax.swing.JLabel Title_Label1;
+    private javax.swing.JLabel Title_Label10;
+    private javax.swing.JLabel Title_Label3;
+    private javax.swing.JLabel Title_Label4;
+    private javax.swing.JLabel Title_Label5;
+    private javax.swing.JLabel Title_Label6;
+    private javax.swing.JLabel Title_Label7;
+    private javax.swing.JLabel Title_Label8;
+    private javax.swing.JLabel Title_Label9;
     private javax.swing.JLabel bDescrp;
     private javax.swing.JLabel bDescrp2;
-    private javax.swing.JLabel blur1;
     private javax.swing.JLabel blur2;
     private javax.swing.JLabel blur3;
+    private javax.swing.JLabel blur4;
     private javax.swing.JLabel gif1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel10;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel11;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel12;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel13;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel14;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel15;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel16;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel17;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel18;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel3;
     private com.k33ptoo.components.KGradientPanel kGradientPanel4;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel5;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel6;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel7;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel8;
+    private com.k33ptoo.components.KGradientPanel kGradientPanel9;
     private view_components.ScalableLabel scalableLabel1;
+    private view_components.ScalableLabel scalableLabel2;
+    private view_components.ScalableLabel scalableLabel3;
+    private view_components.ScalableLabel scalableLabel4;
     private javax.swing.JLabel text1;
     private view_components.ULabel uHome;
     private view_components.ULabel uLogin;
