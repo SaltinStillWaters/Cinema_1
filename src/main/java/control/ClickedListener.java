@@ -3,7 +3,10 @@ package control;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import model.theater_seats.TheaterSeat;
+import view.SeatFrame.SeatFrame;
+import view.SeatFrame.SeatFrame2;
 import view_components.ScaleableLabel;
 import view_components.UMovieLabel;
 import view_components.USeat;
@@ -67,17 +70,29 @@ public class ClickedListener extends MouseAdapter
                     component.setState("selected");
                     
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_selected.png"));
-                    uSeat.setSize(USeat.imageWidth, USeat.imageHeight);
                     uSeat.scale();
                     
+                    String location = uSeat.getSeat().getLocation();
+                    SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
+                    String textFieldText = currFrame.getTFieldText();
+                    currFrame.setTFieldText(textFieldText + location + ", ");
                 }
                 else if (component.getState().equals("selected"))
                 {
                     component.setState("available");
                     
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_available.png"));
-                    uSeat.setSize(USeat.imageWidth, USeat.imageHeight);
                     uSeat.scale();
+                    
+                    String location = uSeat.getSeat().getLocation();
+                    SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
+                    String textFieldText = currFrame.getTFieldText();
+
+                    // Remove the location from the text field
+                    textFieldText = textFieldText.replace(location + ", ", "");
+
+                    currFrame.setTFieldText(textFieldText);
+                    
                 }
             }
            

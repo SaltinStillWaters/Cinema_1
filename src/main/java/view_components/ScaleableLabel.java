@@ -1,5 +1,6 @@
 package view_components;
 
+import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -11,7 +12,9 @@ public class ScaleableLabel extends JLabel
     {
         ImageIcon imgIcon = (ImageIcon) this.getIcon();
         Image img = (imgIcon.getImage());
-        Image imgScale = img.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
+        
+        Dimension dimension = this.getPreferredSize();
+        Image imgScale = img.getScaledInstance(dimension.width, dimension.height, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         this.setIcon(scaledIcon);
     }
