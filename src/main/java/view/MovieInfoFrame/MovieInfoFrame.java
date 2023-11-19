@@ -91,8 +91,9 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(11, 0, 26));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setForeground(new java.awt.Color(11, 0, 26));
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1329, 2983, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 1180, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MovieInfoFrame/seeblack.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -110,17 +111,17 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("YuGothic", 3, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(237, 58, 133));
         jLabel8.setText("AVENGERS: END GAME");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, 640, 80));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 640, 80));
 
         jLabel9.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(225, 225, 225));
         jLabel9.setText("MTRCB Rating: PG-13");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 290, 80));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 290, 80));
 
         jLabel10.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(225, 225, 225));
         jLabel10.setText("Running Time: 3h : 1m");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 290, 80));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 290, 80));
 
         jLabel12.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(225, 225, 225));
@@ -130,12 +131,12 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(225, 225, 225));
         jLabel15.setText("Chris Evans");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 290, 80));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 290, 80));
 
         jLabel16.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(225, 225, 225));
         jLabel16.setText("Mark Ruffalo");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 290, 80));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, 290, 80));
 
         jLabel11.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(225, 225, 225));
@@ -145,12 +146,12 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(225, 225, 225));
         jLabel13.setText("Director: Anthony Russo   ");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 380, 80));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 330, 380, 80));
 
         jLabel14.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(225, 225, 225));
         jLabel14.setText("Joe Russo");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 360, 290, 80));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 360, 290, 80));
 
         jLabel17.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(225, 225, 225));
@@ -266,7 +267,6 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private view_components.ScaleableLabel movieLabel;
     private javax.swing.JComboBox<String> timeComboBox;
