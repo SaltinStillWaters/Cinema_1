@@ -27,6 +27,11 @@ public class SeatFrame extends javax.swing.JFrame {
     
     public SeatFrame() 
     {
+        
+        setLocationRelativeTo(null);
+        this.setResizable(false); // Disable resize frame
+
+        
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         this.setPreferredSize(new Dimension(840, 500));
                

@@ -23,6 +23,8 @@ public class PaymentDetails extends javax.swing.JFrame {
      */
     public PaymentDetails() {
         initComponents();
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
         uLabel2.scale();
     }
 

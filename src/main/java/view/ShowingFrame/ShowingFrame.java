@@ -9,12 +9,12 @@ package view.ShowingFrame;
  * @author adrianealtiche
  */
 public class ShowingFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form ShowingFrame
-     */
+   
+   
     public ShowingFrame() {
         initComponents();
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -30,8 +30,6 @@ public class ShowingFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         uLabel1 = new view_components.ULabel();
-        uLabel2 = new view_components.ULabel();
-        uLabel3 = new view_components.ULabel();
         uLabel4 = new view_components.ULabel();
         uLabel5 = new view_components.ULabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -78,27 +76,17 @@ public class ShowingFrame extends javax.swing.JFrame {
         uLabel1.setForeground(new java.awt.Color(225, 225, 225));
         uLabel1.setText("CONTACT US");
         uLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, -1, -1));
-
-        uLabel2.setForeground(new java.awt.Color(225, 225, 225));
-        uLabel2.setText("SEE SCHEDULE");
-        uLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
-
-        uLabel3.setForeground(new java.awt.Color(225, 225, 225));
-        uLabel3.setText("FEATURE");
-        uLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jPanel1.add(uLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         uLabel4.setForeground(new java.awt.Color(225, 225, 225));
         uLabel4.setText("NOW SHOWING");
         uLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jPanel1.add(uLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+        jPanel1.add(uLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         uLabel5.setForeground(new java.awt.Color(225, 225, 225));
         uLabel5.setText("COMING SOON");
         uLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jPanel1.add(uLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+        jPanel1.add(uLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 848));
 
@@ -266,8 +254,6 @@ public class ShowingFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private com.k33ptoo.components.KGradientPanel kGradientPanel1;
     private view_components.ULabel uLabel1;
-    private view_components.ULabel uLabel2;
-    private view_components.ULabel uLabel3;
     private view_components.ULabel uLabel4;
     private view_components.ULabel uLabel5;
     private view_components.UMovieLabel uMovieLabel1;

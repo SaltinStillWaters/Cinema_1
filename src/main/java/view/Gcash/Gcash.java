@@ -19,12 +19,13 @@ import view_components.USeat;
  * @author adrianealtiche
  */
 public class Gcash extends javax.swing.JFrame {
-
     /**
      * Creates new form Gcash
      */
     public Gcash() {
         initComponents();
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
 
     }
 
@@ -71,19 +72,19 @@ public class Gcash extends javax.swing.JFrame {
                 uLabel2MouseClicked(evt);
             }
         });
-        jPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, -1, -1));
+        jPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 570, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/seeblack gcah.png"))); // NOI18N
         jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 10, 340, 130));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 10, 340, 130));
 
         jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 1050, 70));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 1050, 70));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(225, 225, 225));
         jLabel7.setText("PAYMENT");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 560, 80));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 560, 80));
 
         jLabel1.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,10 +94,10 @@ public class Gcash extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SCAN FOR PAYMENT");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 280, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 280, 60));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/qr final.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-470, -220, 1870, 980));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-480, -220, 1870, 980));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 860));
 
