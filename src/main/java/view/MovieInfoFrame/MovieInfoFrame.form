@@ -259,43 +259,11 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e1" green="e1" red="e1" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.  "/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;center&gt;  After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.   With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos&apos;&#xa;actions and restore balance to the universe. &#xa;   &lt;/center&gt; &lt;/html&gt; "/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="170" y="680" width="1030" height="70"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="YuGothic" size="24" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e1" green="e1" red="e1" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos&apos; "/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="170" y="720" width="1110" height="70"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="YuGothic" size="24" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e1" green="e1" red="e1" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="actions and restore balance to the universe. "/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="170" y="760" width="1110" height="70"/>
+                  <AbsoluteConstraints x="160" y="660" width="1040" height="90"/>
                 </Constraint>
               </Constraints>
             </Component>

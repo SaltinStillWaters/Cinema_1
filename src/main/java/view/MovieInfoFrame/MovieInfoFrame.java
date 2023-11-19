@@ -75,8 +75,6 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         chooseSeatsLabel = new view_components.ULabel();
         dateComboBox = new javax.swing.JComboBox<>();
         timeComboBox = new javax.swing.JComboBox<>();
@@ -156,18 +154,8 @@ public class MovieInfoFrame extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(225, 225, 225));
-        jLabel17.setText("After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.  ");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 680, 1030, 70));
-
-        jLabel18.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(225, 225, 225));
-        jLabel18.setText("With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' ");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 720, 1110, 70));
-
-        jLabel4.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(225, 225, 225));
-        jLabel4.setText("actions and restore balance to the universe. ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 760, 1110, 70));
+        jLabel17.setText("<html> <center>  After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.   With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos'\nactions and restore balance to the universe. \n   </center> </html> ");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 660, 1040, 90));
 
         chooseSeatsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MovieInfoFrame/VIEW.png"))); // NOI18N
         chooseSeatsLabel.setDestFrame("SeatFrame");
@@ -271,9 +259,7 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
