@@ -24,8 +24,7 @@ public class ShowingFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -81,7 +80,6 @@ public class ShowingFrame extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/see.png"))); // NOI18N
-        jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 10, 680, 110));
 
         uLabel1.setForeground(new java.awt.Color(225, 225, 225));
