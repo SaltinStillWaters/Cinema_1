@@ -4,7 +4,15 @@
  */
 package view.Gcash;
 
+import control.ControlSeats;
+import java.awt.Dimension;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+import model.theater_seats.Seat;
+import model.theater_seats.Seats;
+import model.theater_seats.TheaterSeat;
+import view_components.USeat;
 
 /**
  *
@@ -32,12 +40,12 @@ public class Gcash extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         refNumTField = new javax.swing.JTextField();
+        uLabel2 = new view_components.ULabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        uLabel1 = new view_components.ULabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,6 +68,17 @@ public class Gcash extends javax.swing.JFrame {
         });
         jPanel1.add(refNumTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 320, -1));
 
+        uLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/getReceipt.png"))); // NOI18N
+        uLabel2.setDestFrame("Receipt");
+        uLabel2.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                uLabel2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, -1, -1));
+
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/seeblack gcah.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 10, 340, 130));
@@ -81,10 +100,6 @@ public class Gcash extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SCAN FOR PAYMENT");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 280, 60));
-
-        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/CONTINUEFORRECEIPT.png"))); // NOI18N
-        uLabel1.setDestFrame("Receipt");
-        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-480, 120, 1430, 580));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/qr final.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-470, -220, 1870, 980));
@@ -114,6 +129,35 @@ public class Gcash extends javax.swing.JFrame {
                     textField.setText("Reference Number");
                 }
     }//GEN-LAST:event_refNumTFieldFocusLost
+
+    private void uLabel2MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_uLabel2MouseClicked
+    {//GEN-HEADEREND:event_uLabel2MouseClicked
+        //init Seats
+        ControlSeats ctrlSeats = ControlSeats.getInstance();
+        TheaterSeat tSeatCurr = ctrlSeats.getCurrTheaterSeat();
+        TheaterSeat tSeat = ctrlSeats.getTheaterSeats().getTheaterSeat(tSeatCurr);   //reference for the Model.TheaterSeat
+        
+        
+        ArrayList<ArrayList<Seat>> seats = tSeat.getSeats().getSeats();
+        
+        for (int row = 0; row < Seats.rows; ++row)
+        {
+            ArrayList<Seat> seatArray = seats.get(row);
+            
+            for (int col = 0; col < Seats.cols; ++col)
+            {
+                Seat seat = seatArray.get(col);
+               
+                
+                if (seat.getState().equals("selected"))
+                {
+                    seat.setState("reserved");
+                }
+                
+            }
+            
+        }
+    }//GEN-LAST:event_uLabel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -159,6 +203,6 @@ public class Gcash extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField refNumTField;
-    private view_components.ULabel uLabel1;
+    private view_components.ULabel uLabel2;
     // End of variables declaration//GEN-END:variables
 }

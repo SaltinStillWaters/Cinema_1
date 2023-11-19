@@ -72,6 +72,7 @@ public class Receipt extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        uLabel1 = new view_components.ULabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -184,6 +185,10 @@ public class Receipt extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Receipt/PAID.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 1120, 330));
 
+        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backtoHome.png"))); // NOI18N
+        uLabel1.setDestFrame("HomePage");
+        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 610, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1460, 850));
 
         pack();
@@ -248,5 +253,6 @@ public class Receipt extends javax.swing.JFrame {
     private javax.swing.JLabel paidPriceLabel;
     private javax.swing.JLabel priceLabel;
     private javax.swing.JLabel traceNumLabel;
+    private view_components.ULabel uLabel1;
     // End of variables declaration//GEN-END:variables
 }

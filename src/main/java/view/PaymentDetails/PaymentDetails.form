@@ -287,16 +287,16 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="view_components.ULabel" name="uLabel1">
+        <Component class="view_components.ULabel" name="uLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/PaymentDetails/proceed to g-cash payment.png"/>
+              <Image iconType="3" name="/proceedToGcash.png"/>
             </Property>
             <Property name="destFrame" type="java.lang.String" value="Gcash"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-200" y="-150" width="-1" height="-1"/>
+              <AbsoluteConstraints x="870" y="520" width="280" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

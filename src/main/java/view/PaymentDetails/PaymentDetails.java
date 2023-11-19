@@ -23,7 +23,7 @@ public class PaymentDetails extends javax.swing.JFrame {
      */
     public PaymentDetails() {
         initComponents();
-        
+        uLabel2.scale();
     }
 
     public void updateFrame()
@@ -79,7 +79,7 @@ public class PaymentDetails extends javax.swing.JFrame {
         seatsSelectedLabel = new javax.swing.JLabel();
         priceLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        uLabel1 = new view_components.ULabel();
+        uLabel2 = new view_components.ULabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -181,9 +181,9 @@ public class PaymentDetails extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/holderplace.png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -120, -1, -1));
 
-        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/proceed to g-cash payment.png"))); // NOI18N
-        uLabel1.setDestFrame("Gcash");
-        jPanel2.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -150, -1, -1));
+        uLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proceedToGcash.png"))); // NOI18N
+        uLabel2.setDestFrame("Gcash");
+        jPanel2.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 520, 280, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 850));
 
@@ -302,6 +302,6 @@ public class PaymentDetails extends javax.swing.JFrame {
     private javax.swing.JLabel timeLabel;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JLabel totalPriceLabel;
-    private view_components.ULabel uLabel1;
+    private view_components.ULabel uLabel2;
     // End of variables declaration//GEN-END:variables
 }
