@@ -23,6 +23,8 @@ public class PaymentDetails extends javax.swing.JFrame {
      */
     public PaymentDetails() {
         initComponents();
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
         uLabel2.scale();
     }
 
@@ -59,8 +61,7 @@ public class PaymentDetails extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -78,8 +79,15 @@ public class PaymentDetails extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         seatsSelectedLabel = new javax.swing.JLabel();
         priceLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         uLabel2 = new view_components.ULabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        priceLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,16 +96,17 @@ public class PaymentDetails extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(11, 0, 26));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Fill-up Details");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 130, 290, 120));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 300, 290, 120));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/seeblackpaymentdet.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 10, 340, 130));
 
         jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 1050, 70));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 1050, 70));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(225, 225, 225));
@@ -107,83 +116,89 @@ public class PaymentDetails extends javax.swing.JFrame {
         totalPriceLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         totalPriceLabel.setForeground(new java.awt.Color(255, 255, 255));
         totalPriceLabel.setText("TOTAL PRICE: 1,200.00 Php");
-        jPanel2.add(totalPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, 250, 60));
+        totalPriceLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(totalPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, 250, 60));
 
         nameTField.setText("Name");
-        nameTField.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        nameTField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 nameTFieldFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 nameTFieldFocusLost(evt);
             }
         });
-        jPanel2.add(nameTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 330, 30));
+        jPanel2.add(nameTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 330, 30));
 
-        jLabel21.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("YuGothic", 0, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("PAYMENT DETAILS");
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 270, 60));
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 270, 60));
 
         titleLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel.setText("AVENGERS: END GAME");
-        jPanel2.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 360, 60));
+        jPanel2.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 360, 60));
 
         phoneTField.setText("Phone Number");
-        phoneTField.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        phoneTField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 phoneTFieldFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 phoneTFieldFocusLost(evt);
             }
         });
-        jPanel2.add(phoneTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 330, 30));
+        jPanel2.add(phoneTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 440, 330, 30));
 
         dateLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(255, 255, 255));
         dateLabel.setText("DECEMBER 1, 2023");
-        jPanel2.add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 250, 60));
+        jPanel2.add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 250, 60));
 
         jLabel25.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("SM ROBINSONS");
-        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 260, 60));
+        jLabel25.setText("SEENEMA CLUB");
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 260, 60));
 
         timeLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         timeLabel.setForeground(new java.awt.Color(255, 255, 255));
         timeLabel.setText("1:45 Researved Seating");
-        jPanel2.add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 350, 60));
+        jPanel2.add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 350, 60));
 
         jLabel27.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("TICKET(S)");
-        jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, 100, 60));
+        jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 100, 60));
 
         seatsSelectedLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         seatsSelectedLabel.setForeground(new java.awt.Color(255, 255, 255));
         seatsSelectedLabel.setText("A11, A12, A13");
         seatsSelectedLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(seatsSelectedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 540, 380, 60));
+        jPanel2.add(seatsSelectedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 380, 60));
 
         priceLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         priceLabel.setForeground(new java.awt.Color(255, 255, 255));
         priceLabel.setText("3x 1,200.00 Php");
-        jPanel2.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 200, 60));
+        jPanel2.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 60));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 300, 5));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 300, 5));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, 300, 5));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/holderplace.png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -120, -1, -1));
 
         uLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proceedToGcash.png"))); // NOI18N
         uLabel2.setDestFrame("Gcash");
-        jPanel2.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 520, 280, -1));
+        jPanel2.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 500, 280, -1));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, 300, 5));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 300, 5));
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 300, 5));
+
+        priceLabel1.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        priceLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        priceLabel1.setText("3x 1,200.00 Php");
+        jPanel2.add(priceLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 60));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 850));
 
@@ -294,10 +309,17 @@ public class PaymentDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JTextField nameTField;
     private javax.swing.JTextField phoneTField;
     private javax.swing.JLabel priceLabel;
+    private javax.swing.JLabel priceLabel1;
     private javax.swing.JLabel seatsSelectedLabel;
     private javax.swing.JLabel timeLabel;
     private javax.swing.JLabel titleLabel;

@@ -15,6 +15,8 @@ public class SignIn extends javax.swing.JFrame {
      */
     public SignIn() {
         initComponents();
+        this.setResizable(false); // Disable resize frame
+        setLocationRelativeTo(null);
         txtup.setBackground(new java.awt.Color(0,0,0,1));
         txtps.setBackground(new java.awt.Color(0,0,0,1));
         
@@ -65,7 +67,7 @@ public class SignIn extends javax.swing.JFrame {
         jLabel3.setText("LOG");
         kGradientPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 230, -1, -1));
 
-        txtup.setForeground(new java.awt.Color(255, 255, 255));
+        txtup.setForeground(new java.awt.Color(102, 0, 102));
         txtup.setText("username or phone number");
         txtup.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
         txtup.addActionListener(new java.awt.event.ActionListener() {
@@ -73,30 +75,29 @@ public class SignIn extends javax.swing.JFrame {
                 txtupActionPerformed(evt);
             }
         });
-        kGradientPanel1.add(txtup, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 280, -1));
+        kGradientPanel1.add(txtup, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 280, 30));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("LOG-IN");
-        kGradientPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 590, 60, 20));
+        kGradientPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(863, 565, 60, 20));
 
-        txtps.setForeground(new java.awt.Color(255, 255, 255));
-        txtps.setText("jPasswordField1");
+        txtps.setForeground(new java.awt.Color(102, 0, 102));
         txtps.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
-        kGradientPanel1.add(txtps, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 510, 280, -1));
+        kGradientPanel1.add(txtps, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 507, 280, 30));
 
         jLabel5.setFont(new java.awt.Font("YuGothic", 1, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Don't ave an account?");
-        kGradientPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 620, -1, -1));
+        kGradientPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 550, -1, -1));
 
         uLabel2.setForeground(new java.awt.Color(237, 58, 133));
         uLabel2.setText("Sign-Up");
         uLabel2.setFont(new java.awt.Font("YuGothic", 3, 14)); // NOI18N
-        kGradientPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 630, 120, 30));
+        kGradientPanel1.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 560, 120, 30));
 
         uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignIn/signinbutton.png"))); // NOI18N
-        kGradientPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 350, -1, -1));
+        kGradientPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 330, 50));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
