@@ -68,7 +68,7 @@ public class SignUp extends javax.swing.JFrame {
         kGradientPanel1.add(txtcp, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 500, 340, 20));
 
         txtuser.setForeground(new java.awt.Color(255, 255, 255));
-        txtuser.setText("e-mail goes here");
+        txtuser.setText("username goes here");
         txtuser.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(255, 255, 255)));
         txtuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +134,7 @@ public class SignUp extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SignUp/designdesign.png"))); // NOI18N
         kGradientPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, -30, 1420, 750));
 
-        getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 800));
+        getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
