@@ -26,14 +26,6 @@ public class ComingSoon extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        uMovieLabel1 = new view_components.UMovieLabel();
-        uMovieLabel3 = new view_components.UMovieLabel();
-        uMovieLabel4 = new view_components.UMovieLabel();
-        uMovieLabel5 = new view_components.UMovieLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         uLabel1 = new view_components.ULabel();
@@ -41,44 +33,21 @@ public class ComingSoon extends javax.swing.JFrame {
         uLabel3 = new view_components.ULabel();
         uLabel4 = new view_components.ULabel();
         uLabel5 = new view_components.ULabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        jPanel2.setBackground(new java.awt.Color(11, 0, 26));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1440, 800));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(225, 225, 225));
-        jLabel4.setText("COMING SOON");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 450, 80));
-
-        jLabel6.setText("jLabel6");
-        jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 1050, 70));
-
-        uMovieLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/insidious.png"))); // NOI18N
-        uMovieLabel1.setText("uMovieLabel1");
-        jPanel2.add(uMovieLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 210, 310, 400));
-
-        uMovieLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/coco.png"))); // NOI18N
-        uMovieLabel3.setText("uMovieLabel1");
-        jPanel2.add(uMovieLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 310, 400));
-
-        uMovieLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/oppenheimer.png"))); // NOI18N
-        uMovieLabel4.setText("uMovieLabel1");
-        jPanel2.add(uMovieLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 210, 310, 400));
-
-        uMovieLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/barbie.png"))); // NOI18N
-        uMovieLabel5.setText("uMovieLabel1");
-        jPanel2.add(uMovieLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 310, 400));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 10, 52));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -112,44 +81,67 @@ public class ComingSoon extends javax.swing.JFrame {
         uLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jPanel1.add(uLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 1660));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 230, 863));
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        jPanel2.setBackground(new java.awt.Color(11, 0, 26));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1440, 800));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(225, 225, 225));
+        jLabel4.setText("COMING SOON");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 450, 80));
+
+        jLabel6.setText("jLabel6");
+        jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 1050, 70));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(225, 225, 225));
         jLabel7.setText("INSIDIOUS: THE RED DOOR");
         jLabel7.setToolTipText("");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 630, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 550, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(225, 225, 225));
         jLabel8.setText("BARBIE");
         jLabel8.setToolTipText("");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(225, 225, 225));
         jLabel10.setText("OPPENHEIMER");
         jLabel10.setToolTipText("");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 630, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(225, 225, 225));
         jLabel11.setText("COCO");
         jLabel11.setToolTipText("");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 630, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 550, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/barbie.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/coco.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/oppenheimer.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ComingSoon/insidious.png"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 40, -1, -1));
 
         jScrollPane1.setViewportView(jPanel2);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 1230, 857));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -190,13 +182,17 @@ public class ComingSoon extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -205,9 +201,5 @@ public class ComingSoon extends javax.swing.JFrame {
     private view_components.ULabel uLabel3;
     private view_components.ULabel uLabel4;
     private view_components.ULabel uLabel5;
-    private view_components.UMovieLabel uMovieLabel1;
-    private view_components.UMovieLabel uMovieLabel3;
-    private view_components.UMovieLabel uMovieLabel4;
-    private view_components.UMovieLabel uMovieLabel5;
     // End of variables declaration//GEN-END:variables
 }

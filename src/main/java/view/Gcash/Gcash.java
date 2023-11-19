@@ -35,8 +35,7 @@ public class Gcash extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         refNumTField = new javax.swing.JTextField();
@@ -55,14 +54,11 @@ public class Gcash extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         refNumTField.setText("Reference Number");
-        refNumTField.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
+        refNumTField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
                 refNumTFieldFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
+            public void focusLost(java.awt.event.FocusEvent evt) {
                 refNumTFieldFocusLost(evt);
             }
         });
@@ -70,10 +66,8 @@ public class Gcash extends javax.swing.JFrame {
 
         uLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/getReceipt.png"))); // NOI18N
         uLabel2.setDestFrame("Receipt");
-        uLabel2.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
+        uLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
                 uLabel2MouseClicked(evt);
             }
         });
