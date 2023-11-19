@@ -41,6 +41,12 @@ public class Movies
         {
             e.printStackTrace();
         }
+
+
+        for (Movie iter : movies)
+        {
+            System.out.println(iter);
+        }
     }
 
     public static Movies getInstance()

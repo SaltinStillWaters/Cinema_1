@@ -3,13 +3,8 @@ package control;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
-import model.Movies.Movie;
-import model.Movies.Movies;
 import model.theater_seats.TheaterSeat;
-import model.theater_seats.TheaterSeats;
-import view.MovieInfoFrame.MovieInfoFrame;
 import view.SeatFrame.SeatFrame;
-import view_components.ULabel;
 import view_components.UMovieLabel;
 import view_components.USeat;
 import view_components.interfaces.ChangeState;
@@ -25,25 +20,10 @@ public class ClickedListener extends MouseAdapter
         
         Object source = e.getSource();
         
-        if (source instanceof UMovieLabel)
-        {
-            ControlSeats ctrlSeats = ControlSeats.getInstance();
-            
-            UMovieLabel movieLabel = (UMovieLabel) source;
-            String movieTitle = movieLabel.getMovieTitle();
-            Movie movie = Movies.getInstance().getMovie(movieTitle);
-            ctrlData.setCurrMovie(movie);
-            ControlFrame.changeFrame("MovieInfoFrame");
-            MovieInfoFrame frame = (MovieInfoFrame) ctrlData.getFrameByName("MovieInfoFrame");
-            frame.changeMovie(movie);
-            
-            TheaterSeat tSeat = ctrlSeats.getCurrTheaterSeat();
-            tSeat.setMovieTitle(movieLabel.getMovieTitle());
-        }
-        else if (source instanceof SwitchFrame)
+        if (source instanceof SwitchFrame)
         {
             SwitchFrame component = (SwitchFrame) source;   //Component that triggered the event
-            boolean isSwitch = true;
+
             
             //Determine destFrame
             String destFrame = "";
@@ -61,40 +41,18 @@ public class ClickedListener extends MouseAdapter
             else
             {
                  destFrame = component.getDestFrame();
-                 
-                 if (source instanceof ULabel)
-                 {
-                     ULabel sourceLabel = (ULabel) source;
-                     if (sourceLabel.getDestFrame().equals("SeatFrame"))
-                     {
-                         //point to proper currTSeat
-                         ControlSeats ctrlSeats = ControlSeats.getInstance();
-                         String movieTitle = ctrlData.getCurrMovie().getTitle();
-                         String date = ((MovieInfoFrame) ctrlData.getFrameByName("MovieInfoFrame")).getDate();
-                         String time = ((MovieInfoFrame) ctrlData.getFrameByName("MovieInfoFrame")).getTime();
-                         
-                         if ((TheaterSeats.getInstance().getTheaterSeat(movieTitle, date, time)) != null)
-                         {
-                            ctrlSeats.setCurrTheaterSeat(TheaterSeats.getInstance().getTheaterSeat(movieTitle, date, time));
-                         
-                            //init components of Frame
-                            SeatFrame currFrame = ((SeatFrame) ctrlData.getFrameByName("SeatFrame"));
-                            currFrame.constructSeats();
-                            currFrame.updateTextField();
-                            
-                            isSwitch = true;
-                         }
-                         else
-                         {
-                             isSwitch = false;
-                         }
-                     }
-                 }
             }
-            if (!destFrame.equals("") && !destFrame.isBlank() && isSwitch)
-            {
-                ControlFrame.changeFrame(destFrame);
-            }
+            
+            ControlFrame.changeFrame(destFrame);
+        }
+        else if (source instanceof UMovieLabel)
+        {
+            ControlSeats ctrlSeats = ControlSeats.getInstance();
+            
+            UMovieLabel movieLabel = (UMovieLabel) source;
+            
+            TheaterSeat tSeat = ctrlSeats.getCurrTheaterSeat();
+            tSeat.setMovieTitle(movieLabel.getMovieTitle());
         }
         else if (source instanceof ChangeState)
         {
@@ -110,9 +68,11 @@ public class ClickedListener extends MouseAdapter
                     
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_selected.png"));
                     uSeat.scale();
-                  
+                    
+                    String location = uSeat.getSeat().getLocation();
                     SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
-                    currFrame.updateTextField();
+                    String textFieldText = currFrame.getTFieldText();
+                    currFrame.setTFieldText(textFieldText + location + ", ");
                 }
                 else if (component.getState().equals("selected"))
                 {
@@ -121,9 +81,15 @@ public class ClickedListener extends MouseAdapter
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_available.png"));
                     uSeat.scale();
                     
+                    String location = uSeat.getSeat().getLocation();
                     SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
+                    String textFieldText = currFrame.getTFieldText();
+
+                    // Remove the location from the text field
+                    textFieldText = textFieldText.replace(location + ", ", "");
+
+                    currFrame.setTFieldText(textFieldText);
                     
-                    currFrame.updateTextField();
                 }
             }
            
