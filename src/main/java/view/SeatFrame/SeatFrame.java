@@ -28,7 +28,8 @@ public class SeatFrame extends javax.swing.JFrame {
     public SeatFrame() 
     {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
-        this.setPreferredSize(new Dimension(840, 450));
+        this.setPreferredSize(new Dimension(840, 500));
+        this.getContentPane().setBackground(new java.awt.Color(11, 0, 26));
         
         int seatHGap = 2;
         int seatVGap = 2;
@@ -39,6 +40,10 @@ public class SeatFrame extends javax.swing.JFrame {
         seatPanel3 = new JPanel(new GridLayout(Seats.rows / 2, Seats.cols / 2, seatHGap, seatVGap));
         seatPanel4 = new JPanel(new GridLayout(Seats.rows / 2, Seats.cols / 2, seatHGap, seatVGap));
 
+        seatPanel1.setBackground(new java.awt.Color(11, 0, 26));
+        seatPanel2.setBackground(new java.awt.Color(11, 0, 26));
+        seatPanel3.setBackground(new java.awt.Color(11, 0, 26));
+        seatPanel4.setBackground(new java.awt.Color(11, 0, 26));
         
         //init USeats
         uSeats = new ArrayList<>();
@@ -92,12 +97,14 @@ public class SeatFrame extends javax.swing.JFrame {
         this.add(categoryLabel);
         
         seatSelectedLabel = new JLabel();
+        seatSelectedLabel.setFont(new java.awt.Font("YuGothic", 1, 26));
+        seatSelectedLabel.setForeground(new java.awt.Color(255, 255, 255));
         this.add(seatSelectedLabel);
         
         
         backButton = new ULabel();
         backButton.setType("back");
-        backButton.setText("back");
+        backButton.setIcon(new ImageIcon("src/main/resources/confirm.png"));
         this.add(backButton);
         
         pack();

@@ -4,6 +4,8 @@
  */
 package view.Gcash;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author adrianealtiche
@@ -15,7 +17,6 @@ public class Gcash extends javax.swing.JFrame {
      */
     public Gcash() {
         initComponents();
-                txtreference.setBackground(new java.awt.Color(0,0,0,1));
 
     }
 
@@ -26,15 +27,16 @@ public class Gcash extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jPanel1 = new javax.swing.JPanel();
+        refNumTField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtreference = new javax.swing.JTextField();
         uLabel1 = new view_components.ULabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -43,6 +45,20 @@ public class Gcash extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(11, 0, 26));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        refNumTField.setText("Reference Number");
+        refNumTField.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                refNumTFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                refNumTFieldFocusLost(evt);
+            }
+        });
+        jPanel1.add(refNumTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 320, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/seeblack gcah.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -59,24 +75,15 @@ public class Gcash extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INPUT FOR CONFIRMATION");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, 370, 60));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, 370, 60));
 
         jLabel2.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SCAN FOR PAYMENT");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 280, 60));
 
-        txtreference.setForeground(new java.awt.Color(255, 255, 255));
-        txtreference.setText("  REFERENCE NUMBER");
-        txtreference.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(237, 58, 133)));
-        txtreference.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtreferenceActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtreference, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, 620, 40));
-
         uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/CONTINUEFORRECEIPT.png"))); // NOI18N
+        uLabel1.setDestFrame("Receipt");
         jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-480, 120, 1430, 580));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GCASH/qr final.png"))); // NOI18N
@@ -87,9 +94,26 @@ public class Gcash extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtreferenceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtreferenceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtreferenceActionPerformed
+    private void refNumTFieldFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_refNumTFieldFocusGained
+    {//GEN-HEADEREND:event_refNumTFieldFocusGained
+        JTextField textField = (JTextField) evt.getSource();
+    
+        // Check if the mouse click occurred on the JTextField
+        if (textField.getText().equals("Reference Number")) 
+        {
+            // Clear the text when the JTextField is clicked
+            textField.setText("");
+        }
+    }//GEN-LAST:event_refNumTFieldFocusGained
+
+    private void refNumTFieldFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_refNumTFieldFocusLost
+    {//GEN-HEADEREND:event_refNumTFieldFocusLost
+        JTextField textField = (JTextField) evt.getSource();
+                if (textField.getText().trim().isEmpty()) 
+                {
+                    textField.setText("Reference Number");
+                }
+    }//GEN-LAST:event_refNumTFieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -134,7 +158,7 @@ public class Gcash extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtreference;
+    private javax.swing.JTextField refNumTField;
     private view_components.ULabel uLabel1;
     // End of variables declaration//GEN-END:variables
 }

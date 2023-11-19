@@ -12,10 +12,16 @@ import javax.swing.JFrame;
 import model.Movies.Movie;
 import view.ComingSoon.ComingSoon;
 import view.ContactUs.ContactUs;
+import view.Gcash.Gcash;
 import view.HomePage.HomePage;
 import view.MovieInfoFrame.MovieInfoFrame;
+import view.PaymentDetails.PaymentDetails;
+import view.Receipt.Receipt;
 import view.SeatFrame.SeatFrame;
 import view.ShowingFrame.ShowingFrame;
+import view.SignIn.SignIn;
+import view.SignUp.SignUp;
+import view.SignUpFrame.SignUpFrame;
 
 
 public class ControlData
@@ -40,10 +46,12 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("HomePage", "ShowingFrame", "SeatFrame","ComingSoon", "ContactUs", "MovieInfoFrame")
+            frameNames  = Stream.of("ShowingFrame", "Gcash", "HomePage", "SeatFrame","ComingSoon", "ContactUs", "MovieInfoFrame",
+                    "PaymentDetails", "Receipt", "SignIn", "SignUp", "SignUpFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new HomePage(), new ShowingFrame(), new SeatFrame(), new ComingSoon(), new ContactUs(), new MovieInfoFrame())
+            jFrames     = Stream.of(new ShowingFrame(), new Gcash(), new HomePage(), new SeatFrame(), new ComingSoon(), new ContactUs(), new MovieInfoFrame(),
+                     new PaymentDetails(), new Receipt(), new SignIn(), new SignUp(), new SignUpFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
