@@ -4,22 +4,54 @@
  */
 package view.PaymentDetails;
 
+import control.ControlData;
+import control.ControlSeats;
+import javax.swing.JTextField;
+import model.theater_seats.TheaterSeat;
+import view.SeatFrame.SeatFrame;
+
 /**
  *
  * @author adrianealtiche
  */
 public class PaymentDetails extends javax.swing.JFrame {
 
+    int totalPrice;
+    
     /**
      * Creates new form PaymentDetails
      */
     public PaymentDetails() {
         initComponents();
-        txtname.setBackground(new java.awt.Color(0,0,0,1));
-        txtphone.setBackground(new java.awt.Color(0,0,0,1));
-
+        uLabel2.scale();
     }
 
+    public void updateFrame()
+    {
+        ControlSeats ctrlSeat = ControlSeats.getInstance();
+        TheaterSeat tSeat = ctrlSeat.getCurrTheaterSeat();
+        
+        titleLabel.setText(tSeat.getMovieTitle());
+        dateLabel.setText(tSeat.getDate());
+        timeLabel.setText(tSeat.getTime());
+        
+        //price
+        SeatFrame seatFrame = (SeatFrame) ControlData.getInstance().getFrameByName("SeatFrame");
+        String seatSelected = seatFrame.getTFieldText();
+        int seatCount = seatSelected.split(",").length - 1;
+        
+        
+        String priceComp = seatCount + " x 350.00 PhP";
+        priceLabel.setText(priceComp);
+        
+        //total price
+        totalPrice = seatCount * 350;
+        
+        totalPriceLabel.setText("TOTAL PRICE: " + totalPrice + ".00 Php");
+        
+        //seats selected
+        seatsSelectedLabel.setText(seatFrame.getTFieldText());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,26 +59,27 @@ public class PaymentDetails extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        totalPriceLabel = new javax.swing.JLabel();
+        nameTField = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        txtphone = new javax.swing.JTextField();
-        txtname = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        phoneTField = new javax.swing.JTextField();
+        dateLabel = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        timeLabel = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
+        seatsSelectedLabel = new javax.swing.JLabel();
+        priceLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        uLabel1 = new view_components.ULabel();
+        uLabel2 = new view_components.ULabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,6 +87,10 @@ public class PaymentDetails extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(11, 0, 26));
         jPanel2.setForeground(new java.awt.Color(11, 0, 26));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setText("Fill-up Details");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 130, 290, 120));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/seeblackpaymentdet.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -67,96 +104,151 @@ public class PaymentDetails extends javax.swing.JFrame {
         jLabel7.setText("PAYMENT DETAILS");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 560, 80));
 
-        jLabel22.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("TOTAL PRICE: 1,200.00 Php");
-        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 570, 250, 60));
+        totalPriceLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
+        totalPriceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        totalPriceLabel.setText("TOTAL PRICE: 1,200.00 Php");
+        jPanel2.add(totalPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, 250, 60));
+
+        nameTField.setText("Name");
+        nameTField.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                nameTFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                nameTFieldFocusLost(evt);
+            }
+        });
+        jPanel2.add(nameTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 330, 30));
 
         jLabel21.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("PAYMENT DETAILS");
         jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 270, 60));
 
-        txtphone.setForeground(new java.awt.Color(255, 255, 255));
-        txtphone.setText("          Phone Number");
-        txtphone.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(237, 58, 133)));
-        txtphone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtphoneActionPerformed(evt);
+        titleLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
+        titleLabel.setText("AVENGERS: END GAME");
+        jPanel2.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 360, 60));
+
+        phoneTField.setText("Phone Number");
+        phoneTField.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                phoneTFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                phoneTFieldFocusLost(evt);
             }
         });
-        jPanel2.add(txtphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, 680, 30));
+        jPanel2.add(phoneTField, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 330, 30));
 
-        txtname.setForeground(new java.awt.Color(255, 255, 255));
-        txtname.setText("          Name");
-        txtname.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(237, 58, 133)));
-        txtname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnameActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, 680, 30));
-
-        jLabel20.setFont(new java.awt.Font("YuGothic", 1, 24)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("FILL UP THE DETAILS");
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 250, 270, 60));
-
-        jLabel23.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("AVENGERS: END GAME");
-        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 210, 60));
-
-        jLabel24.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("DECEMBER 1, 2023");
-        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 170, 60));
+        dateLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        dateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dateLabel.setText("DECEMBER 1, 2023");
+        jPanel2.add(dateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 250, 60));
 
         jLabel25.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("SM ROBINSONS");
-        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 140, 60));
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 260, 60));
 
-        jLabel26.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("1:45 Researved Seating");
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 200, 60));
+        timeLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        timeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        timeLabel.setText("1:45 Researved Seating");
+        jPanel2.add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 350, 60));
 
         jLabel27.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("TICKET(S)");
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, 100, 60));
 
-        jLabel28.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("A11, A12, A13");
-        jLabel28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 120, 60));
+        seatsSelectedLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        seatsSelectedLabel.setForeground(new java.awt.Color(255, 255, 255));
+        seatsSelectedLabel.setText("A11, A12, A13");
+        seatsSelectedLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(seatsSelectedLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 540, 380, 60));
 
-        jLabel29.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setText("3x 1,200.00 Php");
-        jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 200, 60));
+        priceLabel.setFont(new java.awt.Font("YuGothic", 0, 18)); // NOI18N
+        priceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        priceLabel.setText("3x 1,200.00 Php");
+        jPanel2.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 200, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/holderplace.png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -120, -1, -1));
 
-        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PaymentDetails/proceed to g-cash payment.png"))); // NOI18N
-        jPanel2.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -230, -1, -1));
+        uLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proceedToGcash.png"))); // NOI18N
+        uLabel2.setDestFrame("Gcash");
+        jPanel2.add(uLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 520, 280, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtphoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtphoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtphoneActionPerformed
+    private void nameTFieldFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_nameTFieldFocusGained
+    {//GEN-HEADEREND:event_nameTFieldFocusGained
+        JTextField textField = (JTextField) evt.getSource();
+    
+        // Check if the mouse click occurred on the JTextField
+        if (textField.getText().equals("Name")) 
+        {
+            // Clear the text when the JTextField is clicked
+            textField.setText("");
+        }
+    }//GEN-LAST:event_nameTFieldFocusGained
 
-    private void txtnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtnameActionPerformed
+    private void nameTFieldFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_nameTFieldFocusLost
+    {//GEN-HEADEREND:event_nameTFieldFocusLost
+        JTextField textField = (JTextField) evt.getSource();
+                if (textField.getText().trim().isEmpty()) 
+                {
+                    textField.setText("Name");
+                }
+    }//GEN-LAST:event_nameTFieldFocusLost
 
+    private void phoneTFieldFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_phoneTFieldFocusGained
+    {//GEN-HEADEREND:event_phoneTFieldFocusGained
+        JTextField textField = (JTextField) evt.getSource();
+    
+        // Check if the mouse click occurred on the JTextField
+        if (textField.getText().equals("Phone Number")) 
+        {
+            // Clear the text when the JTextField is clicked
+            textField.setText("");
+        }
+    }//GEN-LAST:event_phoneTFieldFocusGained
+
+    private void phoneTFieldFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_phoneTFieldFocusLost
+    {//GEN-HEADEREND:event_phoneTFieldFocusLost
+        JTextField textField = (JTextField) evt.getSource();
+                if (textField.getText().trim().isEmpty()) 
+                {
+                    textField.setText("Phone Number");
+                }
+    }//GEN-LAST:event_phoneTFieldFocusLost
+
+    public int getTotalPrice()
+    {
+        return totalPrice;
+    }
+
+    
+    public String getNameVal()
+    {
+        return nameTField.getText();
+    }
+
+    public String getPhoneVal()
+    {
+        return phoneTField.getText();
+    }
+
+    
     /**
      * @param args the command line arguments
      */
@@ -193,23 +285,23 @@ public class PaymentDetails extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dateLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtname;
-    private javax.swing.JTextField txtphone;
-    private view_components.ULabel uLabel1;
+    private javax.swing.JTextField nameTField;
+    private javax.swing.JTextField phoneTField;
+    private javax.swing.JLabel priceLabel;
+    private javax.swing.JLabel seatsSelectedLabel;
+    private javax.swing.JLabel timeLabel;
+    private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel totalPriceLabel;
+    private view_components.ULabel uLabel2;
     // End of variables declaration//GEN-END:variables
 }
