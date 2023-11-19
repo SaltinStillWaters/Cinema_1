@@ -6,8 +6,10 @@ import javax.swing.ImageIcon;
 import model.Movies.Movie;
 import model.Movies.Movies;
 import model.theater_seats.TheaterSeat;
+import model.theater_seats.TheaterSeats;
 import view.MovieInfoFrame.MovieInfoFrame;
 import view.SeatFrame.SeatFrame;
+import view_components.ULabel;
 import view_components.UMovieLabel;
 import view_components.USeat;
 import view_components.interfaces.ChangeState;
@@ -41,7 +43,7 @@ public class ClickedListener extends MouseAdapter
         else if (source instanceof SwitchFrame)
         {
             SwitchFrame component = (SwitchFrame) source;   //Component that triggered the event
-
+            boolean isSwitch = true;
             
             //Determine destFrame
             String destFrame = "";
@@ -59,9 +61,40 @@ public class ClickedListener extends MouseAdapter
             else
             {
                  destFrame = component.getDestFrame();
+                 
+                 if (source instanceof ULabel)
+                 {
+                     ULabel sourceLabel = (ULabel) source;
+                     if (sourceLabel.getDestFrame().equals("SeatFrame"))
+                     {
+                         //point to proper currTSeat
+                         ControlSeats ctrlSeats = ControlSeats.getInstance();
+                         String movieTitle = ctrlData.getCurrMovie().getTitle();
+                         String date = ((MovieInfoFrame) ctrlData.getFrameByName("MovieInfoFrame")).getDate();
+                         String time = ((MovieInfoFrame) ctrlData.getFrameByName("MovieInfoFrame")).getTime();
+                         
+                         if ((TheaterSeats.getInstance().getTheaterSeat(movieTitle, date, time)) != null)
+                         {
+                            ctrlSeats.setCurrTheaterSeat(TheaterSeats.getInstance().getTheaterSeat(movieTitle, date, time));
+                         
+                            //init components of Frame
+                            ((SeatFrame) ctrlData.getFrameByName("SeatFrame")).constructSeats();
+                            
+                            isSwitch = true;
+                         }
+                         else
+                         {
+                             isSwitch = false;
+                         }
+                         
+                     }
+                 }
             }
-            
-            ControlFrame.changeFrame(destFrame);
+            if (!destFrame.equals("") && !destFrame.isBlank() && isSwitch)
+            {
+                System.out.println(destFrame);
+                ControlFrame.changeFrame(destFrame);
+            }
         }
         else if (source instanceof ChangeState)
         {

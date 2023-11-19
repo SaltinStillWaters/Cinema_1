@@ -17,15 +17,18 @@ import java.util.ArrayList;
 
 public class SeatFrame extends javax.swing.JFrame {
     private JPanel seatPanel1, seatPanel2, seatPanel3, seatPanel4;
-    private JTextField tField;
+    private JLabel seatSelectedLabel;
     
     public SeatFrame() 
     {
+        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        this.setPreferredSize(new Dimension(840, 450));
+    }
+    
+    public void constructSeats()
+    {
         int seatHGap = 2;
         int seatVGap = 2;
-
-        this.setLayout(new FlowLayout(FlowLayout.LEFT));
-        this.setPreferredSize(new Dimension(800, 600));
 
         // Create four separate panels for each block
         seatPanel1 = new JPanel(new GridLayout(Seats.rows / 2, Seats.cols / 2, seatHGap, seatVGap));
@@ -78,8 +81,17 @@ public class SeatFrame extends javax.swing.JFrame {
         this.add(seatPanel3);
         this.add(seatPanel4);
 
-        tField = new JTextField();
-        this.add(tField);
+        
+        // seat selected summary
+        JLabel categoryLabel = new JLabel("Selected Seats: ");
+        this.add(categoryLabel);
+        
+        seatSelectedLabel = new JLabel();
+        this.add(seatSelectedLabel);
+        
+        
+        
+        
         pack();
         
         
@@ -87,11 +99,11 @@ public class SeatFrame extends javax.swing.JFrame {
     
     public String getTFieldText()
     {
-        return tField.getText();
+        return seatSelectedLabel.getText();
     }
     
     public void setTFieldText(String text)
     {
-        tField.setText(text);
+        seatSelectedLabel.setText(text);
     }
 }

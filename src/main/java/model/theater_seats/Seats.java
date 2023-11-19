@@ -14,8 +14,8 @@ public class Seats
     
     static
     {
-        rows = 20;
-        cols = 15;
+        rows = 10;
+        cols = 30;
     }
     
     public Seats()

@@ -17,6 +17,9 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     /**
      * Creates new form MovieInfoNew
      */
+    private String date;
+    private String time;
+    
     public MovieInfoFrame() {
         initComponents();
         
@@ -34,6 +37,18 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         
         jLabel17.setText(movie.getSypnosis());
     }
+
+    public String getDate()
+    {
+        return (String) dateComboBox.getSelectedItem();
+    }
+
+    public String getTime()
+    {
+        return (String) timeComboBox.getSelectedItem();
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,9 +77,9 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        uLabel1 = new view_components.ULabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        chooseSeatsLabel = new view_components.ULabel();
+        dateComboBox = new javax.swing.JComboBox<>();
+        timeComboBox = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         movieLabel = new view_components.ScaleableLabel();
@@ -154,32 +169,33 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         jLabel4.setText("actions and restore balance to the universe. ");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 760, 1110, 70));
 
-        uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MovieInfoFrame/VIEW.png"))); // NOI18N
-        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 910, 430, 80));
+        chooseSeatsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MovieInfoFrame/VIEW.png"))); // NOI18N
+        chooseSeatsLabel.setDestFrame("SeatFrame");
+        jPanel1.add(chooseSeatsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 910, 430, 80));
 
-        jComboBox2.setBackground(new java.awt.Color(237, 58, 133));
-        jComboBox2.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT DATE", "DECEMBER 1, 2023", "DECEMBER 2, 2023", "DECEMBER 3, 2023", "DECEMBER 4, 2024" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener()
+        dateComboBox.setBackground(new java.awt.Color(237, 58, 133));
+        dateComboBox.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
+        dateComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT DATE", "DECEMBER 1, 2023", "DECEMBER 2, 2023", "DECEMBER 3, 2023", "DECEMBER 4, 2024" }));
+        dateComboBox.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jComboBox2ActionPerformed(evt);
+                dateComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 920, 220, -1));
+        jPanel1.add(dateComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 920, 220, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(237, 58, 133));
-        jComboBox1.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHEDULE", "1:45 PM RESERVED SEATING", "4:10 PM RESERVED SEATING", "6:30 PM RESERVED SEATING", "8:45 PM RESERVED SEATING", " " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener()
+        timeComboBox.setBackground(new java.awt.Color(237, 58, 133));
+        timeComboBox.setFont(new java.awt.Font("YuGothic", 1, 13)); // NOI18N
+        timeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SCHEDULE", "1:45 PM RESERVED SEATING", "4:10 PM RESERVED SEATING", "6:30 PM RESERVED SEATING", "8:45 PM RESERVED SEATING", " " }));
+        timeComboBox.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jComboBox1ActionPerformed(evt);
+                timeComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 960, 220, -1));
+        jPanel1.add(timeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 960, 220, -1));
 
         jPanel2.setBackground(new java.awt.Color(237, 58, 133));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -199,13 +215,13 @@ public class MovieInfoFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void dateComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_dateComboBoxActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void timeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_timeComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,8 +260,8 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private view_components.ULabel chooseSeatsLabel;
+    private javax.swing.JComboBox<String> dateComboBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -267,6 +283,6 @@ public class MovieInfoFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private view_components.ScaleableLabel movieLabel;
-    private view_components.ULabel uLabel1;
+    private javax.swing.JComboBox<String> timeComboBox;
     // End of variables declaration//GEN-END:variables
 }
