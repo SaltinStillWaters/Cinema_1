@@ -56,7 +56,8 @@ public class HomePage extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
@@ -156,6 +157,7 @@ public class HomePage extends javax.swing.JFrame {
 
         uHome.setForeground(new java.awt.Color(237, 237, 237));
         uHome.setText("<html>\n<p style = \"font-family:Yu Gothic Light Bold;\">\n<font size = \"3,5\">\nHOME\n</font size>\n</p>\n</html>\n");
+        uHome.setDestFrame("ShowingFrame");
         kGradientPanel1.add(uHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, -1, -1));
 
         uLogin.setForeground(new java.awt.Color(237, 237, 237));
@@ -237,11 +239,14 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel3.setkEndColor(new java.awt.Color(102, 0, 102));
         kGradientPanel3.setkGradientFocus(15);
         kGradientPanel3.setkStartColor(new java.awt.Color(7, 7, 7));
-        kGradientPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        kGradientPanel3.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel3MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel3MouseExited(evt);
             }
         });
@@ -338,11 +343,14 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel7.setkEndColor(new java.awt.Color(102, 0, 102));
         kGradientPanel7.setkGradientFocus(10);
         kGradientPanel7.setkStartColor(new java.awt.Color(0, 0, 0));
-        kGradientPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        kGradientPanel7.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel7MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel7MouseExited(evt);
             }
         });
@@ -392,11 +400,14 @@ public class HomePage extends javax.swing.JFrame {
         kGradientPanel11.setkEndColor(new java.awt.Color(102, 0, 102));
         kGradientPanel11.setkGradientFocus(100);
         kGradientPanel11.setkStartColor(new java.awt.Color(0, 0, 0));
-        kGradientPanel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        kGradientPanel11.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel11MouseEntered(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
                 kGradientPanel11MouseExited(evt);
             }
         });

@@ -12,7 +12,9 @@ import javax.swing.JFrame;
 import view.ComingSoon.ComingSoon;
 import view.ContactUs.ContactUs;
 import view.HomePage.HomePage;
+import view.MovieInfoFrame.MovieInfoFrame;
 import view.SeatFrame.SeatFrame;
+import view.ShowingFrame.ShowingFrame;
 
 
 public class ControlData
@@ -36,10 +38,12 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("HomePage", "SeatFrame","ComingSoon", "ContactUs")
+            frameNames  = Stream.of("HomePage", "SeatFrame","ComingSoon", "ContactUs", "MovieInfoFrame",
+                    "ShowingFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new HomePage(), new SeatFrame(), new ComingSoon(), new ContactUs())
+            jFrames     = Stream.of(new HomePage(), new SeatFrame(), new ComingSoon(), new ContactUs(), new MovieInfoFrame(),
+                    new ShowingFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             

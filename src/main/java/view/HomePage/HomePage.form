@@ -74,6 +74,7 @@
                   <Color blue="ed" green="ed" red="ed" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;p style = &quot;font-family:Yu Gothic Light Bold;&quot;&gt;&#xa;&lt;font size = &quot;3,5&quot;&gt;&#xa;HOME&#xa;&lt;/font size&gt;&#xa;&lt;/p&gt;&#xa;&lt;/html&gt;&#xa;"/>
+                <Property name="destFrame" type="java.lang.String" value="ShowingFrame"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
