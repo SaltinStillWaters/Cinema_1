@@ -91,7 +91,6 @@ public class ClickedListener extends MouseAdapter
             }
             if (!destFrame.equals("") && !destFrame.isBlank() && isSwitch)
             {
-                System.out.println(destFrame);
                 ControlFrame.changeFrame(destFrame);
             }
         }

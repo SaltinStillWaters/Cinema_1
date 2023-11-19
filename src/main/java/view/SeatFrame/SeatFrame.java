@@ -14,15 +14,19 @@ import view_components.USeat;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import view_components.ULabel;
 
 public class SeatFrame extends javax.swing.JFrame {
     private JPanel seatPanel1, seatPanel2, seatPanel3, seatPanel4;
     private JLabel seatSelectedLabel;
+    private ULabel backButton;
     
     public SeatFrame() 
     {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         this.setPreferredSize(new Dimension(840, 450));
+        
+        constructSeats();
     }
     
     public void constructSeats()
@@ -40,7 +44,7 @@ public class SeatFrame extends javax.swing.JFrame {
         ControlSeats ctrlSeats = ControlSeats.getInstance();
         TheaterSeat tSeatCurr = ctrlSeats.getCurrTheaterSeat();
         TheaterSeat tSeat = ctrlSeats.getTheaterSeats().getTheaterSeat(tSeatCurr);   //reference for the Model.TheaterSeat
-
+                                                                                      
         Seats seats = tSeat.getSeats();
         ArrayList<ArrayList<Seat>> seatArray = seats.getSeats();
         ArrayList<ArrayList<USeat>> uSeatArray = new ArrayList<>();
@@ -90,7 +94,10 @@ public class SeatFrame extends javax.swing.JFrame {
         this.add(seatSelectedLabel);
         
         
-        
+        backButton = new ULabel();
+        backButton.setType("back");
+        backButton.setText("back");
+        this.add(backButton);
         
         pack();
         
