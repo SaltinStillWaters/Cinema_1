@@ -36,9 +36,7 @@ public class Account {
      * 
      * @return the First name of the user.
      */
-    public String getFirstName(){
-        return firstName;
-    }
+ 
      
     /**
      * Sets the First name of the user.
