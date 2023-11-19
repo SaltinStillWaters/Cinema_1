@@ -15,8 +15,6 @@ public class ContactUs extends javax.swing.JFrame {
      */
     public ContactUs() {
         initComponents();
-        this.setResizable(false); // Disable resize frame
-        setLocationRelativeTo(null);
     }
 
     /**
@@ -39,6 +37,7 @@ public class ContactUs extends javax.swing.JFrame {
         uLabel5 = new view_components.ULabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,11 +88,17 @@ public class ContactUs extends javax.swing.JFrame {
         jLabel4.setText("CONTACT US");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 450, 80));
 
+        jLabel6.setText("jLabel6");
         jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 1050, 70));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 1050, 70));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ContactUs/logoContactUs/seenema black.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 410, 340));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ContactUs/info.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 540, 360));
+        jLabel2.setText("jLabel2");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 540, 360));
 
         jScrollPane2.setViewportView(jPanel2);
 
@@ -138,6 +143,7 @@ public class ContactUs extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

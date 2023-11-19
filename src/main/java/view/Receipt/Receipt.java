@@ -21,9 +21,6 @@ public class Receipt extends javax.swing.JFrame {
      */
     public Receipt() {
         initComponents();
-        setLocationRelativeTo(null);
-        this.setResizable(false); // Disable resize frame
-        
     }
 
     public void updateFrame()
@@ -49,7 +46,8 @@ public class Receipt extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jPanel1 = new javax.swing.JPanel();
         paidPriceLabel = new javax.swing.JLabel();
@@ -59,7 +57,6 @@ public class Receipt extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         dateTimeLabel = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -74,8 +71,8 @@ public class Receipt extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         uLabel1 = new view_components.ULabel();
-        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,115 +80,114 @@ public class Receipt extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(11, 0, 26));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        paidPriceLabel.setFont(new java.awt.Font("Yu Gothic Light", 0, 36)); // NOI18N
+        paidPriceLabel.setFont(new java.awt.Font("Eras Demi ITC", 1, 48)); // NOI18N
         paidPriceLabel.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(paidPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 353, 210, 60));
+        paidPriceLabel.setText("jLabel4");
+        jPanel1.add(paidPriceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 380, 240, 40));
 
         jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(237, 58, 133)));
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 1050, 70));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 1050, 70));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 52)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(225, 225, 225));
         jLabel7.setText("RECEIPT");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 560, 80));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 560, 80));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Receipt/seeblackreceiptpng.png"))); // NOI18N
         jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 10, 340, 130));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, 10, 340, 130));
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 55)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("₱");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 350, 40, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 360, 40, -1));
 
-        jLabel3.setFont(new java.awt.Font("Yu Gothic Light", 1, 48)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 3, 55)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PAID");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 250, 130, 90));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 270, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("YuGothic", 1, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("PAYMENT DETAILS");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 360, 80));
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 310, 260, 10));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 360, 80));
 
         dateTimeLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         dateTimeLabel.setForeground(new java.awt.Color(255, 255, 255));
         dateTimeLabel.setText("NOVEMBER 20, 2023 7:42 AM");
-        jPanel1.add(dateTimeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, -1, 70));
+        jPanel1.add(dateTimeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, -1, 70));
 
         jLabel15.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("SEENEMA");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 255, 220, 70));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 220, 70));
 
         jLabel16.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Gcash");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 180, 70));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 180, 70));
 
         priceLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         priceLabel.setForeground(new java.awt.Color(255, 255, 255));
         priceLabel.setText("₱ 1,200.00 ");
-        jPanel1.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 220, 70));
+        jPanel1.add(priceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 220, 70));
 
         traceNumLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         traceNumLabel.setForeground(new java.awt.Color(255, 255, 255));
         traceNumLabel.setText("TRS0922711168999");
-        jPanel1.add(traceNumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 290, 70));
+        jPanel1.add(traceNumLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 290, 70));
 
         jLabel19.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("711911");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 180, 70));
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 180, 70));
 
         jLabel20.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("TO:");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 40, 20));
+        jLabel20.setText("TO");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 150, 70));
 
         jLabel21.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("FROM:");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 60, 30));
+        jLabel21.setText("FROM");
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 180, 70));
 
         nameLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("MYCHAL P***** ");
-        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 290, 360, 70));
+        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 360, 70));
 
         numberLabel.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         numberLabel.setForeground(new java.awt.Color(255, 255, 255));
         numberLabel.setText("09* **** 0711 ");
-        jPanel1.add(numberLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, 240, 70));
+        jPanel1.add(numberLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 240, 70));
 
         jLabel24.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("TOTAL:");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, 20));
+        jLabel24.setText("TOTAL");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 190, 70));
 
         jLabel25.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("REFERENCE NO.:");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 460, 160, 20));
+        jLabel25.setText("REFERENCE NO.");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 270, 70));
 
         jLabel26.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("TRACE ID:");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 481, 100, 30));
+        jLabel26.setText("TRACE ID");
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 210, 70));
 
         jLabel27.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("DATE:");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 515, 60, 20));
+        jLabel27.setText("DATE");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 480, 170, 80));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Receipt/PAID.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 1120, 330));
 
         uLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/backtoHome.png"))); // NOI18N
         uLabel1.setDestFrame("HomePage");
-        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 440, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Receipt/Box.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 260, 310, 170));
+        jPanel1.add(uLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 610, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1460, 850));
 
@@ -235,6 +231,7 @@ public class Receipt extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dateTimeLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel19;
@@ -246,13 +243,11 @@ public class Receipt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel numberLabel;
     private javax.swing.JLabel paidPriceLabel;

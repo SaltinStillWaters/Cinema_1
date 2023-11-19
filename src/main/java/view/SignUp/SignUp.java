@@ -15,8 +15,6 @@ public class SignUp extends javax.swing.JFrame {
      */
     public SignUp() {
         initComponents();
-        this.setResizable(false); // Disable resize frame
-        setLocationRelativeTo(null);
         txtuser.setBackground(new java.awt.Color(0,0,0,1));
         txtpass.setBackground(new java.awt.Color(0,0,0,1));
         txtcp.setBackground(new java.awt.Color(0,0,0,1));
