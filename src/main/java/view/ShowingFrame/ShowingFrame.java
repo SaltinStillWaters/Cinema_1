@@ -24,8 +24,7 @@ public class ShowingFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         kGradientPanel1 = new com.k33ptoo.components.KGradientPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -125,22 +124,18 @@ public class ShowingFrame extends javax.swing.JFrame {
 
         uMovieLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/it.png"))); // NOI18N
         uMovieLabel1.setText("uMovieLabel1");
-        uMovieLabel1.setMovieTitle("It");
         jPanel2.add(uMovieLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 110, 310, 400));
 
         uMovieLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/topgun.png"))); // NOI18N
         uMovieLabel2.setText("uMovieLabel1");
-        uMovieLabel2.setMovieTitle("Top Gun : Maverick");
         jPanel2.add(uMovieLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 690, 310, 400));
 
         uMovieLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/endgame.png"))); // NOI18N
         uMovieLabel3.setText("uMovieLabel1");
-        uMovieLabel3.setMovieTitle("Avengers: Endgame");
         jPanel2.add(uMovieLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 310, 400));
 
         uMovieLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/jurassicworld.png"))); // NOI18N
         uMovieLabel4.setText("uMovieLabel1");
-        uMovieLabel4.setMovieTitle("Jurassic World");
         jPanel2.add(uMovieLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 110, 310, 400));
 
         jLabel7.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N
@@ -169,22 +164,18 @@ public class ShowingFrame extends javax.swing.JFrame {
 
         uMovieLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/insideout.png"))); // NOI18N
         uMovieLabel5.setText("uMovieLabel1");
-        uMovieLabel5.setMovieTitle("Inside Out");
         jPanel2.add(uMovieLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 310, 400));
 
         uMovieLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/titanic.png"))); // NOI18N
         uMovieLabel6.setText("uMovieLabel1");
-        uMovieLabel6.setMovieTitle("Titanic");
         jPanel2.add(uMovieLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 690, 310, 400));
 
         uMovieLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/the karate kid.png"))); // NOI18N
         uMovieLabel7.setText("uMovieLabel1");
-        uMovieLabel7.setMovieTitle("The Karate Kid");
         jPanel2.add(uMovieLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 690, 310, 400));
 
         uMovieLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ShowingFrame/Thumbnail/caroline.png"))); // NOI18N
         uMovieLabel8.setText("uMovieLabel1");
-        uMovieLabel8.setMovieTitle("Caroline");
         jPanel2.add(uMovieLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 690, 310, 400));
 
         jLabel11.setFont(new java.awt.Font("YuGothic", 1, 18)); // NOI18N

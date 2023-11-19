@@ -226,7 +226,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/it.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="It"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -240,7 +239,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/topgun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Top Gun : Maverick"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -254,7 +252,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/endgame.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Avengers: Endgame"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -268,7 +265,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/jurassicworld.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Jurassic World"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -350,7 +346,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/insideout.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Inside Out"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -364,7 +359,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/titanic.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Titanic"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -378,7 +372,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/the karate kid.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="The Karate Kid"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -392,7 +385,6 @@
                   <Image iconType="3" name="/ShowingFrame/Thumbnail/caroline.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="uMovieLabel1"/>
-                <Property name="movieTitle" type="java.lang.String" value="Caroline"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

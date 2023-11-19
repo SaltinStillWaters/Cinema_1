@@ -53,14 +53,6 @@ public class TheaterSeats
         return instance;
     }
 
-    public void resetSeats()
-    {
-        for (TheaterSeat iter : theaterSeats)
-        {
-            iter.resetSeats();
-        }
-    }
-    
     public TheaterSeat getTheaterSeat(TheaterSeat theaterSeat)
     {
         return getTheaterSeat(theaterSeat.getMovieTitle(), theaterSeat.getDate(), theaterSeat.getTime());

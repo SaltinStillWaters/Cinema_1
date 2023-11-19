@@ -33,11 +33,6 @@ public class TheaterSeat
         this.date = date;
     }
 
-    public void resetSeats()
-    {
-        seats.resetSelected();
-    }
-    
     public void setMovieTitle(String movieTitle)
     {
         this.movieTitle = movieTitle;

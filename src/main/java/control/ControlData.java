@@ -9,9 +9,9 @@ import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
-import model.Movies.Movie;
 import view.ComingSoon.ComingSoon;
 import view.ContactUs.ContactUs;
+import view.HomePage.HomePage;
 import view.MovieInfoFrame.MovieInfoFrame;
 import view.SeatFrame.SeatFrame;
 import view.ShowingFrame.ShowingFrame;
@@ -26,7 +26,6 @@ public class ControlData
     
     private Deque<String> frameHistory;
     private static ControlData instance;
-    private Movie currMovie;
     
     //INIT
     /**
@@ -39,10 +38,12 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("ShowingFrame", "SeatFrame","ComingSoon", "ContactUs", "MovieInfoFrame")
+            frameNames  = Stream.of("HomePage", "SeatFrame","ComingSoon", "ContactUs", "MovieInfoFrame",
+                    "ShowingFrame")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of(new ShowingFrame(), new SeatFrame(), new ComingSoon(), new ContactUs(), new MovieInfoFrame())
+            jFrames     = Stream.of(new HomePage(), new SeatFrame(), new ComingSoon(), new ContactUs(), new MovieInfoFrame(),
+                    new ShowingFrame())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
@@ -66,16 +67,7 @@ public class ControlData
         
         return instance;
     }
-
-    public Movie getCurrMovie()
-    {
-        return currMovie;
-    }
-
-    public void setCurrMovie(Movie currMovie)
-    {
-        this.currMovie = currMovie;
-    }
+    
     
     
     //CUSTOM_METHODS
