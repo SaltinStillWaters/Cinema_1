@@ -1,7 +1,7 @@
 package view_components;
 
 
-public class UMovieLabel extends ULabel
+public class UMovieLabel extends ULabel 
 {
     private String movieTitle;
     

@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
+import model.Movies.Movie;
 import view.ComingSoon.ComingSoon;
 import view.ContactUs.ContactUs;
 import view.HomePage.HomePage;
@@ -26,6 +27,7 @@ public class ControlData
     
     private Deque<String> frameHistory;
     private static ControlData instance;
+    private Movie currMovie;
     
     //INIT
     /**
@@ -67,7 +69,16 @@ public class ControlData
         
         return instance;
     }
-    
+
+    public Movie getCurrMovie()
+    {
+        return currMovie;
+    }
+
+    public void setCurrMovie(Movie currMovie)
+    {
+        this.currMovie = currMovie;
+    }
     
     
     //CUSTOM_METHODS
