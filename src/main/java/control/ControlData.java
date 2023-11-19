@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import javax.swing.JFrame;
 import view.ComingSoon.ComingSoon;
 import view.ContactUs.ContactUs;
+import view.HomePage.HomePage;
 import view.SeatFrame.SeatFrame;
 
 
@@ -35,10 +36,10 @@ public class ControlData
     public ControlData()
     {  
         //list frames here:
-            frameNames  = Stream.of("SeatFrame","ComingSoon", "ContactUs")
+            frameNames  = Stream.of("HomePage", "SeatFrame","ComingSoon", "ContactUs")
                     .collect(Collectors.toCollection(ArrayList<String>::new));
 
-            jFrames     = Stream.of( new SeatFrame(), new ComingSoon(), new ContactUs())
+            jFrames     = Stream.of(new HomePage(), new SeatFrame(), new ComingSoon(), new ContactUs())
                     .collect(Collectors.toCollection(ArrayList<JFrame>::new));
         
             
