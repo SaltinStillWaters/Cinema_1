@@ -21,16 +21,15 @@ public class SeatFrame extends javax.swing.JFrame {
     private JLabel seatSelectedLabel;
     private ULabel backButton;
     
+    //seats
+    private ArrayList<ArrayList<USeat>> uSeats;
+    
+    
     public SeatFrame() 
     {
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         this.setPreferredSize(new Dimension(840, 450));
         
-        constructSeats();
-    }
-    
-    public void constructSeats()
-    {
         int seatHGap = 2;
         int seatVGap = 2;
 
@@ -40,44 +39,46 @@ public class SeatFrame extends javax.swing.JFrame {
         seatPanel3 = new JPanel(new GridLayout(Seats.rows / 2, Seats.cols / 2, seatHGap, seatVGap));
         seatPanel4 = new JPanel(new GridLayout(Seats.rows / 2, Seats.cols / 2, seatHGap, seatVGap));
 
-        //init Seats
-        ControlSeats ctrlSeats = ControlSeats.getInstance();
-        TheaterSeat tSeatCurr = ctrlSeats.getCurrTheaterSeat();
-        TheaterSeat tSeat = ctrlSeats.getTheaterSeats().getTheaterSeat(tSeatCurr);   //reference for the Model.TheaterSeat
-                                                                                      
-        Seats seats = tSeat.getSeats();
-        ArrayList<ArrayList<Seat>> seatArray = seats.getSeats();
-        ArrayList<ArrayList<USeat>> uSeatArray = new ArrayList<>();
-
-        for (int x = 0; x < seatArray.size(); ++x) {
-            for (int y = 0; y < seatArray.get(x).size(); ++y) {
-                Seat seatTemp = seatArray.get(x).get(y);
-                USeat uSeatTemp = new USeat();
-
-                Dimension seatDimension = new Dimension(USeat.imageWidth, USeat.imageHeight);
-                uSeatTemp.setPreferredSize(seatDimension);
-                uSeatTemp.setSize(seatDimension);
-                uSeatTemp.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_available.png"));
-                uSeatTemp.scale();
-
-                uSeatTemp.setSeat(seatTemp);
-
+        
+        //init USeats
+        uSeats = new ArrayList<>();
+        
+        for (int row = 0; row < Seats.rows; ++row)
+        {
+            ArrayList<USeat> uSeatArray = new ArrayList<>();
+            
+            for (int col = 0; col < Seats.cols; ++col)
+            {
+                USeat uSeat = new USeat();
+                uSeatArray.add(uSeat);
+                            
                 // Add seats to the appropriate panel
-                if (x < seatArray.size() / 2) {
-                    if (y < seatArray.get(x).size() / 2) {
-                        seatPanel1.add(uSeatTemp);
-                    } else {
-                        seatPanel2.add(uSeatTemp);
+                if (row < Seats.rows / 2) 
+                {
+                    if (col < Seats.cols / 2) 
+                    {
+                        seatPanel1.add(uSeat);
+                    } 
+                    else 
+                    {
+                        seatPanel2.add(uSeat);
                     }
-                } else {
-                    if (y < seatArray.get(x).size() / 2) {
-                        seatPanel3.add(uSeatTemp);
-                    } else {
-                        seatPanel4.add(uSeatTemp);
+                } 
+                else 
+                {
+                    if (col < Seats.cols / 2) 
+                    {
+                        seatPanel3.add(uSeat);
+                    } else 
+                    {
+                        seatPanel4.add(uSeat);
                     }
                 }
             }
+            
+            uSeats.add(uSeatArray);
         }
+        
 
         // Add the four panels to the frame
         this.add(seatPanel1);
@@ -87,7 +88,7 @@ public class SeatFrame extends javax.swing.JFrame {
 
         
         // seat selected summary
-        JLabel categoryLabel = new JLabel("Selected Seats: ");
+        JLabel categoryLabel = new JLabel();
         this.add(categoryLabel);
         
         seatSelectedLabel = new JLabel();
@@ -100,8 +101,83 @@ public class SeatFrame extends javax.swing.JFrame {
         this.add(backButton);
         
         pack();
+      
+    }
+    
+    public void constructSeats()
+    {
+        //init Seats
+        ControlSeats ctrlSeats = ControlSeats.getInstance();
+        TheaterSeat tSeatCurr = ctrlSeats.getCurrTheaterSeat();
+        TheaterSeat tSeat = ctrlSeats.getTheaterSeats().getTheaterSeat(tSeatCurr);   //reference for the Model.TheaterSeat
         
         
+        ArrayList<ArrayList<Seat>> seats = tSeat.getSeats().getSeats();
+        
+        for (int row = 0; row < Seats.rows; ++row)
+        {
+            ArrayList<USeat> uSeatArray = uSeats.get(row);
+            ArrayList<Seat> seatArray = seats.get(row);
+            
+            for (int col = 0; col < Seats.cols; ++col)
+            {
+                USeat uSeat = uSeatArray.get(col);
+                Seat seat = seatArray.get(col);
+                
+                uSeat.setSeat(seat);
+                
+                
+                //set icon
+                Dimension seatDimension = new Dimension(USeat.imageWidth, USeat.imageHeight);
+                uSeat.setPreferredSize(seatDimension);
+                uSeat.setSize(seatDimension);
+                
+                switch (seat.getState())
+                {
+                    case "available":
+                        uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_available.png"));
+                        break;
+                        
+                    case "selected":
+                        uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_selected.png"));
+                        break;
+                        
+                    case "reserved":
+                        uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_reserved.png"));
+                        break;
+                        
+                    default:
+                        System.out.println("Seat state unknown SeatFrame.constructSeats()");;
+                }
+                
+                uSeat.scale();
+                
+            }
+            
+            uSeats.add(uSeatArray);
+        }
+    }
+    
+    public void updateTextField()
+    {
+        String selectedSeats = "";
+        
+        for (int row = 0; row < Seats.rows; ++row)
+        {
+            ArrayList<USeat> uSeatArray = uSeats.get(row);
+            
+            for (int col = 0; col < Seats.cols; ++col)
+            {
+                USeat uSeat = uSeatArray.get(col);
+                
+                if (uSeat.getState().equals("selected"))
+                {
+                    selectedSeats += (uSeat.getSeat().getLocation() + ", ");
+                }
+            }
+        }
+        
+        setTFieldText("Selected seats: " + selectedSeats);
     }
     
     public String getTFieldText()

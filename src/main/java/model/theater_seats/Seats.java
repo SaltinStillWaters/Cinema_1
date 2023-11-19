@@ -71,5 +71,20 @@ public class Seats
         return seats;
     }
     
+    public void resetSelected()
+    {
+        for (int row = 0; row < rows; ++row)
+        {
+            for (int col = 0; col < cols; ++col)
+            {
+                Seat seat = seats.get(row).get(col);
+                
+                if (seat.getState().equals("selected"))
+                {
+                    seat.setState("available");
+                }
+            }
+        }
+    }
     
 }

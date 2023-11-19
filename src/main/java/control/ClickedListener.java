@@ -78,7 +78,9 @@ public class ClickedListener extends MouseAdapter
                             ctrlSeats.setCurrTheaterSeat(TheaterSeats.getInstance().getTheaterSeat(movieTitle, date, time));
                          
                             //init components of Frame
-                            ((SeatFrame) ctrlData.getFrameByName("SeatFrame")).constructSeats();
+                            SeatFrame currFrame = ((SeatFrame) ctrlData.getFrameByName("SeatFrame"));
+                            currFrame.constructSeats();
+                            currFrame.updateTextField();
                             
                             isSwitch = true;
                          }
@@ -108,11 +110,9 @@ public class ClickedListener extends MouseAdapter
                     
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_selected.png"));
                     uSeat.scale();
-                    
-                    String location = uSeat.getSeat().getLocation();
+                  
                     SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
-                    String textFieldText = currFrame.getTFieldText();
-                    currFrame.setTFieldText(textFieldText + location + ", ");
+                    currFrame.updateTextField();
                 }
                 else if (component.getState().equals("selected"))
                 {
@@ -121,15 +121,9 @@ public class ClickedListener extends MouseAdapter
                     uSeat.setIcon(new ImageIcon("src/main/resources/SeatFrame/seat_available.png"));
                     uSeat.scale();
                     
-                    String location = uSeat.getSeat().getLocation();
                     SeatFrame currFrame = (SeatFrame) ctrlData.getFrameByName(ctrlData.getCurrFrame());
-                    String textFieldText = currFrame.getTFieldText();
-
-                    // Remove the location from the text field
-                    textFieldText = textFieldText.replace(location + ", ", "");
-
-                    currFrame.setTFieldText(textFieldText);
                     
+                    currFrame.updateTextField();
                 }
             }
            
